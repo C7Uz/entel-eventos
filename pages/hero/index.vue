@@ -188,7 +188,7 @@ export default defineComponent({
 													<img  src="~/public/assets/img/logoempower.svg" alt="Empower Logo" class="logo-entel inline-block h-10 mr-2" />
 												</h2>
 												<p class="mt-2 text-white/80">Impulsando el futuro de <span class="font-semibold">tu empresa</span></p>
-											<div>
+										
 											<div class="flex items-center justify-center gap-x-2 text-primary mt-2">
 													<NuxtLink :to="'/event/'" class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap md:width-peque-button max-w-full hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
 													Ver evento
