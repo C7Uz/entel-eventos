@@ -61,6 +61,7 @@ $borderRadio: #898B9F;
 $heightHeader: 64px;
 $heightFooter: 80px;
 $widthButton: 264px;
+$widthButtonpeque: 104px;
 
 html, body{
     font-family: 'Barlow' !important;
@@ -159,6 +160,10 @@ html, body{
 
 .width-default-button{
     min-width: $widthButton;
+}
+
+.width-peque-button{
+     width: $widthButtonpeque;
 }
 
 .h-header{
@@ -654,6 +659,15 @@ button{
     -webkit-line-clamp: 1;
 }
 
+.backgraund-blur{
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(37px);
+    max-width: 557px;
+    min-width: 360px;
+    min-height: 520px;
+    padding:65px;
+}
 .min-h-title{
     min-height: 48px;
 }
@@ -661,6 +675,72 @@ button{
 .shake-vertical {
 	-webkit-animation: shake-vertical 7s infinite ;
 	        animation: shake-vertical 7s infinite ;
+}
+
+.wdt-t {
+    display: flex;
+width: 346px;
+flex-direction: column;
+align-items: center;
+gap: 16px;
+}
+.wdt-st {
+ width: 265px;
+color: var(--on-white, #FFF);
+text-align: center;
+/* Medium/Large */
+font-family: Barlow;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 122.222% */
+}
+.container-wdt {
+ height: 472px;
+ max-width: 592px;
+}
+.fondo-personalizado {
+  background-image: url('../img/entel_fondo_2.png'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+ border-radius: 24px;
+width: 592px;
+max-height: 472px;
+padding: 24px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex: 1 0 0;
+}
+
+.logo-entel {
+width: 239.734px;
+height: 83.628px;
+}
+
+.text-entel-ruta{
+    color: var(--on-white, #FFF);
+text-align: center;
+/* Medium/H3 */
+font-family: Barlow;
+font-size: 40px;
+font-style: normal;
+font-weight: 500;
+line-height: 44px; /* 110% */ 
+
+}
+
+.sub-text-entel-ruta{
+    color: var(--on-white, #FFF);
+text-align: center;
+/* Medium/Large */
+font-family: Barlow;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 122.222% */
 }
 
 /**
@@ -747,10 +827,11 @@ button{
     }
 
     
+
 }
 
 @media (max-width: 1024px){
-    
+     
 
 }
 
@@ -789,6 +870,7 @@ button{
     .min-h-64{
         min-height: 290px;
     }
+  
 }
 
 @media (min-width: 640px){
@@ -802,6 +884,24 @@ button{
     .md\:width-default-button{
         min-width: $widthButton;
     }
+.md\:width-peque-button{
+        width: $widthButtonpeque;
+    }
+
+    .md\:h-header{
+        height: $heightHeader;
+        min-height: $heightHeader;
+    }
+
+    .md\:h-footer{
+        height: $heightFooter;
+        min-height: $heightFooter;
+    }
+
+    .md\:bg-transparent-i {
+        background-color: transparent !important;
+    }
+ 
 }
 
 @media (max-width: 640px){
@@ -812,6 +912,8 @@ button{
     .sm-pl-0{
         padding-left: 0 !important;
     }
+
+    
 }
 
 @media (max-width: 768px){
