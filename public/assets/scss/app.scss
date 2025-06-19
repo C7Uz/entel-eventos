@@ -196,6 +196,7 @@ html, body{
     padding-right: 10rem;
     margin-left: auto;
     margin-right: auto;
+    max-width: 1400px;
 }
 
 .text-error{
@@ -313,7 +314,10 @@ html, body{
 .min-h-64{
     min-height: 470px;
 }
-
+ .min-h-128{
+        min-height: 472px;
+        max-width: 592px;
+    }
 .pt-icon{
     padding-top: 2px;
 }
@@ -677,12 +681,7 @@ button{
 	        animation: shake-vertical 7s infinite ;
 }
 
-.wdt-t {
-    display: flex;
-width: 346px;
-flex-direction: column;
-align-items: center;
-gap: 16px;
+.wdt-t { 
 }
 .wdt-st {
  width: 265px;
@@ -699,20 +698,15 @@ line-height: 22px; /* 122.222% */
  height: 472px;
  max-width: 592px;
 }
-.fondo-personalizado {
+.fondo-summit {
   background-image: url('../img/entel_fondo_2.png'); 
   background-size: cover;
   background-position: center;
-  display: flex;
- border-radius: 24px;
-width: 592px;
-max-height: 472px;
-padding: 24px;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 10px;
-flex: 1 0 0;
+}
+.fondo-rutas {
+    border-radius: 24px;
+background: linear-gradient(0deg, rgba(0, 17, 92, 0.40) 0%, rgba(0, 17, 92, 0.40) 100%), url('../img/ruta-entel.jpg') lightgray -75.224px 0px / 141.742% 100% no-repeat;
+
 }
 
 .logo-entel {
@@ -837,7 +831,8 @@ line-height: 22px; /* 122.222% */
 
 
 @media (min-width: 1536px){
-    .container-fluid {
+    .container-fluid { 
+        min-width: 100%;
     }
 }
 
@@ -848,6 +843,10 @@ line-height: 22px; /* 122.222% */
 @media (min-width: 1024px){
     .min-h-64{
         min-height: 290px;
+    }
+    .min-h-128{
+        min-height: 472px;
+        max-width: 592px;
     }
 }
 
@@ -870,7 +869,10 @@ line-height: 22px; /* 122.222% */
     .min-h-64{
         min-height: 290px;
     }
-  
+   .min-h-128{
+        min-height: 472px;
+        max-width: 592px;
+    }
 }
 
 @media (min-width: 640px){

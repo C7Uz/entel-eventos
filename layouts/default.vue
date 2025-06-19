@@ -99,8 +99,8 @@ onMounted(()=>{
 
 		<slot />
 
-		<footer class="w-full h-footer" v-if="settingModule.settings.showFooter">
-			<div class="container-fluid w-full h-full bg-gray-light">
+		<footer class="container-fluid w-full h-footer  bg-gray-light" v-if="settingModule.settings.showFooter">
+			<div class="container h-full">
 				<div class="w-full h-full flex items-center justify-between my-auto">
 					<span class="font-normal text-xs text-dark">Copyright {{currentYear}}. Todos los derechos reservados.</span>
 					<a href="#" class="-m-1.5 p-1.5">
