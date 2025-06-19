@@ -32,9 +32,8 @@ onBeforeMount(async () => {
 <template>
 	<div class="w-full h-full" v-if="eventModule.event">
 		<section 
-		class="relative h-screen" 
-		v-bind:style="{background: 'linear-gradient(0deg, rgba(0, 17, 92, 0.5), rgba(0, 17, 92, 0.5)), url('+eventModule.event.image+')'}"
-		style="background-repeat: no-repeat; background-size: cover; background-position: center;">
+		class="relative h-screen"  
+		style="background: 'linear-gradient(0deg, rgba(0, 17, 92, 0.5), rgba(0, 17, 92, 0.5)), url('../public/assets/img/hero-eventos-entel.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
 			
 		
 				<div class="relative isolate pt-14 h-full w-full">

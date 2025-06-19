@@ -706,9 +706,12 @@ line-height: 22px; /* 122.222% */
 .fondo-rutas {
     border-radius: 24px;
 background: linear-gradient(0deg, rgba(0, 17, 92, 0.40) 0%, rgba(0, 17, 92, 0.40) 100%), url('../img/ruta-entel.jpg') lightgray -75.224px 0px / 141.742% 100% no-repeat;
+}
+.fondo-hero {
+    
+background: linear-gradient(0deg, rgba(0, 17, 92, 0.5), rgba(0, 17, 92, 0.5)), url('../img/hero-eventos-entel.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;
 
 }
-
 .logo-entel {
 width: 239.734px;
 height: 83.628px;
