@@ -115,7 +115,7 @@ export default defineComponent({
 			v-bind:style="{ background: 'linear-gradient(0deg, rgba(0, 17, 92, 0.5), rgba(0, 17, 92, 0.5)), url(' + background + ')' }"
 			style="background-repeat: no-repeat; background-size: cover; background-position: center;">
 
-			<div class="relative isolate h-full w-full">
+			<div class="container  relative isolate h-full w-full">
 				<div class="relative max-w-7xl px-6 py-20">
 
 					<div class="grid md:grid-cols-1 gap-36 items-center">
@@ -135,54 +135,82 @@ export default defineComponent({
 			</div>
 
 		</section>
+		  
+		<main class="bg-white py-12" id="events2">
+			<div class="container hidden md:flex flex-wrap sm-pr-0" style="padding-right: .5rem;">
+				<div class=" min-w-50 w-1/2  mt-6"  >
+					<div class=" flex pr-4" >
+						<article  class="items-center justify-center  fondo-summit min-h-128 flex flex-col lg:flex-row box-shadow-default w-full relative overflow-hidden bg-gray rounded-2xl">
+							<div class="items-center justify-center"  >
+								<h2 class="text-3xl font-bold">
+									<img  src="~/public/assets/img/logoempower.svg" alt="Empower Logo" class="logo-entel inline-block h-10 mr-2" />
+								</h2>
+          						<p class="mt-2 text-white/80">Impulsando el futuro de <span class="font-semibold">tu empresa</span></p>
+        					
+       					  
+														<div class="flex items-center justify-center gap-x-2 text-primary mt-2">
+													<NuxtLink :to="'/event/'" class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap md:width-peque-button max-w-full hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
+													Ver evento
+												</NuxtLink>
+												</div>
+								    
+    					 </div>
 
- 
-					
-				 <main class=" flex flex-col md:flex-row gap-6 p-6 bg-white  py-12 items-center justify-center">
-    <!-- Tarjeta Empower -->
-    <div
-      class="container-wdt relative flex items-center justify-center   rounded-2xl overflow-hidden w-full max-w-md bg-cover bg-center text-white fondo-personalizado"
-       
-    >
-      
-        <div>
-          <h2 class="text-3xl font-bold">
-			<img  src="~/public/assets/img/logoempower.svg" alt="Empower Logo" class="logo-entel inline-block h-10 mr-2" />
-          </h2>
-          <p class="mt-2 text-white/80">Impulsando el futuro de <span class="font-semibold">tu empresa</span></p>
-        </div>
-       <span class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap width-peque-button  hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
-														Ver evento</span>
-													
-												 
-     
-    </div>
-
-    <!-- Tarjeta Entel -->
-
- <div
-      class="container-wdt relative flex items-center justify-center   rounded-2xl overflow-hidden    bg-cover bg-center text-white fondo-personalizado"
-       
-    >
-      
-        <div class="wdt-t"> 
-           <h2 class="text-entel-ruta">La Ruta Entel<br />Empresas</h2>
-          <p class="sub-text-entel-ruta">¡Contenido de valor para potenciar tu empresa!</p> 
-       
-
-       <span class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap width-peque-button  hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
-														Ver fechas</span>
-		 </div>											
-												 
-     
-    </div>
-
-
-
-   
-  	
-			 
-		</main>
+						</article>
+					</div>
+				</div>
+				<div class=" min-w-50 w-1/2  mt-6"  >
+					<div class=" flex pr-4" >
+						<article  class="wdt-t items-center justify-center fondo-rutas min-h-128 flex flex-col lg:flex-row box-shadow-default w-full relative overflow-hidden bg-gray rounded-2xl">
+							<div class=" items-center justify-center"  > 
+								<h2 class="text-entel-ruta">La Ruta Entel<br />Empresas</h2>
+								<p class="sub-text-entel-ruta">¡Contenido de valor para potenciar tu empresa!</p>   
+								<div class="flex items-center justify-center gap-x-2 text-primary mt-2">
+													<NuxtLink :to="'/'" class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap md:width-peque-button max-w-full hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
+													Ver fechas
+												</NuxtLink>
+												</div>
+								 
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+			<div class="container md:hidden sm-pr-0 sm-pl-0" style="padding-right: .5rem;">
+				<div class=" flex flex-col gap-x-8 mt-6">
+					<div class="w-full relative overflow-hidden">
+						<div class="swiper-container py-4">
+							<div class="swiper-wrapper overflow-x-scroll  md:overflow-visible pb-5 gap-x-6">
+								<div style="width: 80vw;" class="swiper-slide">
+									<article class="items-center justify-center   fondo-summit min-h-64 flex flex-col lg:flex-row box-shadow-default w-full relative overflow-hidden bg-gray rounded-2xl">
+														<div class="items-center justify-center"  >
+												<h2 class="text-3xl font-bold">
+													<img  src="~/public/assets/img/logoempower.svg" alt="Empower Logo" class="logo-entel inline-block h-10 mr-2" />
+												</h2>
+												<p class="mt-2 text-white/80">Impulsando el futuro de <span class="font-semibold">tu empresa</span></p>
+											<div>
+											<span class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap width-peque-button  hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
+																		Ver evento</span>   </div>  
+										</div>
+									</article>
+								</div>
+								<div style="width: 80vw;" class="swiper-slide">
+									<article class="items-center justify-center   fondo-rutas  min-h-64 flex flex-col lg:flex-row box-shadow-default w-full relative overflow-hidden bg-gray rounded-2xl">
+											<div class=" items-center justify-center"  > 
+								<h2 class="text-entel-ruta">La Ruta Entel<br />Empresas</h2>
+								<p class="sub-text-entel-ruta">¡Contenido de valor para potenciar tu empresa!</p>   
+								<div><span class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap width-peque-button  hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
+																					Ver fechas</span></div>
+							</div>
+									</article>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+  		</main> 
 	</div>
 </template>
 
