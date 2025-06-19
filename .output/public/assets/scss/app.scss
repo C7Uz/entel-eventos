@@ -61,6 +61,7 @@ $borderRadio: #898B9F;
 $heightHeader: 64px;
 $heightFooter: 80px;
 $widthButton: 264px;
+$widthButtonpeque: 104px;
 
 html, body{
     font-family: 'Barlow' !important;
@@ -161,6 +162,10 @@ html, body{
     min-width: $widthButton;
 }
 
+.width-peque-button{
+     width: $widthButtonpeque;
+}
+
 .h-header{
     height: $heightHeader;
     min-height: $heightHeader;
@@ -191,6 +196,7 @@ html, body{
     padding-right: 10rem;
     margin-left: auto;
     margin-right: auto;
+    max-width: 1400px;
 }
 
 .text-error{
@@ -308,7 +314,10 @@ html, body{
 .min-h-64{
     min-height: 470px;
 }
-
+ .min-h-128{
+        min-height: 472px;
+        max-width: 592px;
+    }
 .pt-icon{
     padding-top: 2px;
 }
@@ -654,6 +663,15 @@ button{
     -webkit-line-clamp: 1;
 }
 
+.backgraund-blur{
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(37px);
+    max-width: 557px;
+    min-width: 360px;
+    min-height: 520px;
+    padding:65px;
+}
 .min-h-title{
     min-height: 48px;
 }
@@ -661,6 +679,73 @@ button{
 .shake-vertical {
 	-webkit-animation: shake-vertical 7s infinite ;
 	        animation: shake-vertical 7s infinite ;
+}
+
+.wdt-t { 
+}
+.wdt-st {
+ width: 265px;
+color: var(--on-white, #FFF);
+text-align: center;
+/* Medium/Large */
+font-family: Barlow;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 122.222% */
+}
+.container-wdt {
+ height: 472px;
+ max-width: 592px;
+}
+.fondo-summit {
+  background-image: url('../img/entel_fondo_2.png'); 
+  background-size: cover;
+  background-position: center;
+}
+.fondo-rutas {
+    border-radius: 24px;
+background: linear-gradient(0deg, rgba(0, 17, 92, 0.40) 0%, rgba(0, 17, 92, 0.40) 100%), url('../img/ruta-entel.jpg') lightgray -75.224px 0px / 141.742% 100% no-repeat;
+}
+.fondo-hero {
+    
+background: linear-gradient(0deg, rgba(0, 17, 92, 0.5), rgba(0, 17, 92, 0.5)), url('../img/hero-eventos-entel.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;
+
+}
+.logo-entel {
+width: 239.734px;
+height: 83.628px;
+}
+
+.fondo-navbar{
+    border-radius: 48px;
+    background: linear-gradient(90deg, rgba(26, 51, 162, 0.28) 0%, rgba(52, 70, 154, 0.12) 100%);
+margin-top: 32px;;
+padding: 20px 20px 20px 32px;
+    backdrop-filter: blur(46px);
+}
+
+.text-entel-ruta{
+    color: var(--on-white, #FFF);
+text-align: center;
+/* Medium/H3 */
+font-family: Barlow;
+font-size: 40px;
+font-style: normal;
+font-weight: 500;
+line-height: 44px; /* 110% */ 
+
+}
+
+.sub-text-entel-ruta{
+    color: var(--on-white, #FFF);
+text-align: center;
+/* Medium/Large */
+font-family: Barlow;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 122.222% */
 }
 
 /**
@@ -747,16 +832,18 @@ button{
     }
 
     
+
 }
 
 @media (max-width: 1024px){
-    
+     
 
 }
 
 
 @media (min-width: 1536px){
-    .container-fluid {
+    .container-fluid { 
+        min-width: 100%;
     }
 }
 
@@ -767,6 +854,10 @@ button{
 @media (min-width: 1024px){
     .min-h-64{
         min-height: 290px;
+    }
+    .min-h-128{
+        min-height: 472px;
+        max-width: 592px;
     }
 }
 
@@ -789,6 +880,10 @@ button{
     .min-h-64{
         min-height: 290px;
     }
+   .min-h-128{
+        min-height: 472px;
+        max-width: 592px;
+    }
 }
 
 @media (min-width: 640px){
@@ -802,6 +897,24 @@ button{
     .md\:width-default-button{
         min-width: $widthButton;
     }
+.md\:width-peque-button{
+        width: $widthButtonpeque;
+    }
+
+    .md\:h-header{
+        height: $heightHeader;
+        min-height: $heightHeader;
+    }
+
+    .md\:h-footer{
+        height: $heightFooter;
+        min-height: $heightFooter;
+    }
+
+    .md\:bg-transparent-i {
+        background-color: transparent !important;
+    }
+ 
 }
 
 @media (max-width: 640px){
@@ -812,6 +925,8 @@ button{
     .sm-pl-0{
         padding-left: 0 !important;
     }
+
+    
 }
 
 @media (max-width: 768px){
