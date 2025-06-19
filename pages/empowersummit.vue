@@ -33,7 +33,7 @@ onBeforeMount(async () => {
 	<div class="w-full h-full" v-if="eventModule.event">
 		<section 
 		class="relative h-screen"  
-		style="background: 'linear-gradient(0deg, rgba(0, 17, 92, 0.5), rgba(0, 17, 92, 0.5)), url('../public/assets/img/hero-eventos-entel.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+		style="">
 			
 		
 				<div class="relative isolate pt-14 h-full w-full">
