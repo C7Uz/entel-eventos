@@ -115,7 +115,7 @@ export default defineComponent({
 		 
 		
 
-			<div class="container  relative isolate h-full w-full">
+			<div class="container relative isolate h-full w-full alinear-middle flex items-center justify-left">
 				<div class="relative max-w-7xl px-6 py-20">
 
 					<div class="grid md:grid-cols-1 gap-36 items-center">
