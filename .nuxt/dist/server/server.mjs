@@ -1,0 +1,1 @@
+export { default } from "file:///C:/Users/Bj%20Cruz/Documents/GitHub/entel-eventos/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"

@@ -90,7 +90,7 @@ const saveData = async () =>{
 				content_type: eventModule.event.tag,
 				content_name: eventModule.event.title
 			}));
-			window.location = `/thanks`;
+			window.location.href = '/thanks';
 		}
 		else{
 			errorsSend.value = useGetError(error)
@@ -121,11 +121,13 @@ onBeforeMount(async () => {
 
 	await eventModule.findOne(route.params.slug)
 	if(!eventModule.event){
-		window.location = '/';
+		window.location.href = '/';
 	}
 	form.value.event = eventModule.event.id
 })
 </script>
+
+
 <template>
 	<main class="w-full h-full pt-20" v-if="eventModule.event">
 		<div class="container-fluid">
@@ -373,6 +375,8 @@ onBeforeMount(async () => {
 		</section>
 	</main>
 </template>
+
+
 <style scoped lang="scss">
 	@import '~/public/assets/scss/app.scss';
 </style>
