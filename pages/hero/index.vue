@@ -192,8 +192,8 @@ export default defineComponent({
 											<div class="flex items-center justify-center gap-x-2 text-primary mt-2">
 													<NuxtLink :to="'/event/'" class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap md:width-peque-button max-w-full hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
 													Ver evento
-												</NuxtLink>
-												</div>
+												  </NuxtLink>
+											 </div>
 										</div>
 									</article>
 								</div>
