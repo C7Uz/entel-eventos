@@ -115,7 +115,7 @@ export default defineComponent({
 		 
 		
 
-			<div class="container  relative isolate h-full w-full">
+			<div class="container relative isolate h-full w-full alinear-middle flex items-center justify-left">
 				<div class="relative max-w-7xl px-6 py-20">
 
 					<div class="grid md:grid-cols-1 gap-36 items-center">
@@ -123,10 +123,10 @@ export default defineComponent({
 							<div class="w-full pb-16 md:pb-8">
 								<img class="w-48" src="~/public/assets/img/logo.svg" alt="">
 							</div>
-							<div class="flex flex-col md:w-1/2" v-if="homeModule.header">
-							<h1 class="text-white font-normal text-6xl" v-text="homeModule.header.title"></h1>
+							<div class="flex flex-col ">
+							<h1 class="text-white font-normal text-6xl" >Conecta con la transformación empresarial</h1>
 							<p class="text-white font-normal text-1xl flex flex-col mt-5"> 
-								<span class="font-regular leading-tight" v-text="homeModule.header.description"></span>
+								<span class="font-regular leading-tight"  >Conferencias exclusivas sobre innovación, tecnología y estrategia para llevar tu negocio al siguiente nivel.</span>
 							</p> 
 						</div>
 						</div>
