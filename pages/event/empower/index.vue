@@ -1087,6 +1087,7 @@ align-self: stretch;
 backdrop-filter: blur(17.100000381469727px);
 width: 100%;
 height: 1px;
+
 }
 
 .speaker-title {
