@@ -60,11 +60,9 @@ const changeColorLogo = ()=>{
 			if(header){
 				if (scrollPosition > 0) {
 					header.classList.add('fixed');
-					header.classList.add('bg-white');
 					header.classList.remove('absolute');
 				} else {
 					header.classList.remove('fixed');
-					header.classList.remove('bg-white');
 					header.classList.add('absolute');
 				}
 			}
@@ -78,8 +76,8 @@ onMounted(()=>{
 
 <template>
 	<div class="w-full h-full" :class="[settingModule.settings.theme]">
-		<header class="absolute inset-x-0 top-0 left-0 z-50 h-header transition duration-3 fixed-header" v-if="settingModule.settings.showHeader">
-			<div class="container-fluid h-full">
+		<header class="container-fluid absolute inset-x-0 top-0 left-0 z-50 h-header transition duration-3 fixed-header" v-if="settingModule.settings.showHeader">
+			<div class=" h-full fondo-navbar">
 				<nav class="flex items-center justify-between py-2 h-full" aria-label="Global">
 					<div class="flex lg:flex-1">
 						<NuxtLink to="/" class="-m-1.5 p-1.5">

@@ -1,11 +1,11 @@
 const client_manifest = {
-  "_edit.b289d1a3.js": {
+  "_edit.4d8cea09.js": {
     "resourceType": "script",
     "module": true,
     "assets": [
       "edit.08e97833.svg"
     ],
-    "file": "edit.b289d1a3.js",
+    "file": "edit.4d8cea09.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -15,23 +15,32 @@ const client_manifest = {
     "resourceType": "image",
     "mimeType": "image/svg+xml"
   },
-  "_event.module.d2e3b3ac.js": {
+  "_event.module.98d930c9.js": {
     "resourceType": "script",
     "module": true,
-    "file": "event.module.d2e3b3ac.js",
+    "file": "event.module.98d930c9.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_useApi.1e0cd296.js"
+      "_useApi.91f10ccb.js"
     ]
   },
-  "_location.7a83b0d9.js": {
+  "_home.module.d0af78f1.js": {
+    "resourceType": "script",
+    "module": true,
+    "file": "home.module.d0af78f1.js",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js",
+      "_useApi.91f10ccb.js"
+    ]
+  },
+  "_location.25714a4f.js": {
     "resourceType": "script",
     "module": true,
     "assets": [
       "calendar.9fdfbc4b.svg",
       "location.fbe7f23a.svg"
     ],
-    "file": "location.7a83b0d9.js",
+    "file": "location.25714a4f.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -46,13 +55,13 @@ const client_manifest = {
     "resourceType": "image",
     "mimeType": "image/svg+xml"
   },
-  "_logo.06c98b26.js": {
+  "_logo.1118a20c.js": {
     "resourceType": "script",
     "module": true,
     "assets": [
       "logo.2dbbcef4.svg"
     ],
-    "file": "logo.06c98b26.js",
+    "file": "logo.1118a20c.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -62,23 +71,23 @@ const client_manifest = {
     "resourceType": "image",
     "mimeType": "image/svg+xml"
   },
-  "_nuxt-link.35b5e431.js": {
+  "_nuxt-link.049cd806.js": {
     "resourceType": "script",
     "module": true,
-    "file": "nuxt-link.35b5e431.js",
+    "file": "nuxt-link.049cd806.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_time.0c32ce32.js": {
+  "_time.e4d8cded.js": {
     "resourceType": "script",
     "module": true,
     "assets": [
       "time.7476fc15.svg"
     ],
-    "file": "time.0c32ce32.js",
+    "file": "time.e4d8cded.js",
     "imports": [
-      "_location.7a83b0d9.js",
+      "_location.25714a4f.js",
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
@@ -87,25 +96,25 @@ const client_manifest = {
     "resourceType": "image",
     "mimeType": "image/svg+xml"
   },
-  "_useApi.1e0cd296.js": {
+  "_useApi.91f10ccb.js": {
     "resourceType": "script",
     "module": true,
-    "file": "useApi.1e0cd296.js",
+    "file": "useApi.91f10ccb.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_useFormatDate.7ad297ab.js": {
+  "_useFormatDate.b2ce1658.js": {
     "resourceType": "script",
     "module": true,
-    "file": "useFormatDate.7ad297ab.js",
+    "file": "useFormatDate.b2ce1658.js",
     "imports": [
-      "_location.7a83b0d9.js"
+      "_location.25714a4f.js"
     ]
   },
   "layouts/default.css": {
     "resourceType": "style",
-    "file": "default.b0a2c75f.css",
+    "file": "default.d9f5b5ca.css",
     "src": "layouts/default.css"
   },
   "layouts/default.vue": {
@@ -118,21 +127,24 @@ const client_manifest = {
       "Barlow-Medium.f1f57edb.ttf",
       "Barlow-SemiBold.07ea3ff2.ttf",
       "Barlow-Bold.984a0f81.ttf",
-      "Barlow-ExtraBold.3bbffb00.ttf"
+      "Barlow-ExtraBold.3bbffb00.ttf",
+      "entel_fondo_2.04ea9a9f.png",
+      "ruta-entel.6ea6d2d5.jpg",
+      "hero-eventos-entel.42088b0b.jpg"
     ],
     "css": [],
-    "file": "default.75778696.js",
+    "file": "default.36448dae.js",
     "imports": [
-      "_nuxt-link.35b5e431.js",
+      "_nuxt-link.049cd806.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_logo.06c98b26.js",
-      "_edit.b289d1a3.js"
+      "_logo.1118a20c.js",
+      "_edit.4d8cea09.js"
     ],
     "isDynamicEntry": true,
     "src": "layouts/default.vue"
   },
-  "default.b0a2c75f.css": {
-    "file": "default.b0a2c75f.css",
+  "default.d9f5b5ca.css": {
+    "file": "default.d9f5b5ca.css",
     "resourceType": "style"
   },
   "logo-color.6e30c63d.svg": {
@@ -170,6 +182,21 @@ const client_manifest = {
     "resourceType": "font",
     "mimeType": "font/ttf"
   },
+  "entel_fondo_2.04ea9a9f.png": {
+    "file": "entel_fondo_2.04ea9a9f.png",
+    "resourceType": "image",
+    "mimeType": "image/png"
+  },
+  "ruta-entel.6ea6d2d5.jpg": {
+    "file": "ruta-entel.6ea6d2d5.jpg",
+    "resourceType": "image",
+    "mimeType": "image/jpeg"
+  },
+  "hero-eventos-entel.42088b0b.jpg": {
+    "file": "hero-eventos-entel.42088b0b.jpg",
+    "resourceType": "image",
+    "mimeType": "image/jpeg"
+  },
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.css": {
     "resourceType": "style",
     "file": "error-404.8bdbaeb8.css",
@@ -179,9 +206,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-404.d90f3b94.js",
+    "file": "error-404.3c51d99a.js",
     "imports": [
-      "_nuxt-link.35b5e431.js",
+      "_nuxt-link.049cd806.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -200,7 +227,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-500.600907a6.js",
+    "file": "error-500.becb4334.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -213,30 +240,106 @@ const client_manifest = {
   },
   "node_modules/nuxt/dist/app/entry.css": {
     "resourceType": "style",
-    "file": "entry.cd537d09.css",
+    "file": "entry.09e26f1c.css",
     "src": "node_modules/nuxt/dist/app/entry.css"
   },
   "node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "css": [
-      "entry.cd537d09.css"
+      "entry.09e26f1c.css"
     ],
     "dynamicImports": [
       "layouts/default.vue",
       "virtual:nuxt:C:/Users/Bj Cruz/Documents/GitHub/entel-eventos/.nuxt/error-component.mjs"
     ],
-    "file": "entry.58fa952d.js",
+    "file": "entry.d08607d8.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js"
   },
-  "entry.cd537d09.css": {
-    "file": "entry.cd537d09.css",
+  "entry.09e26f1c.css": {
+    "file": "entry.09e26f1c.css",
+    "resourceType": "style"
+  },
+  "pages/empowersummit.css": {
+    "resourceType": "style",
+    "file": "empowersummit.4a8d6ce1.css",
+    "src": "pages/empowersummit.css"
+  },
+  "pages/empowersummit.vue": {
+    "resourceType": "script",
+    "module": true,
+    "assets": [
+      "Barlow-Light.c9e9410b.ttf",
+      "Barlow-Regular.77fb1ac5.ttf",
+      "Barlow-Medium.f1f57edb.ttf",
+      "Barlow-SemiBold.07ea3ff2.ttf",
+      "Barlow-Bold.984a0f81.ttf",
+      "Barlow-ExtraBold.3bbffb00.ttf",
+      "entel_fondo_2.04ea9a9f.png",
+      "ruta-entel.6ea6d2d5.jpg",
+      "hero-eventos-entel.42088b0b.jpg"
+    ],
+    "css": [],
+    "file": "empowersummit.8425c1bf.js",
+    "imports": [
+      "_nuxt-link.049cd806.js",
+      "node_modules/nuxt/dist/app/entry.js",
+      "_useFormatDate.b2ce1658.js",
+      "_time.e4d8cded.js",
+      "_location.25714a4f.js",
+      "_edit.4d8cea09.js",
+      "_event.module.98d930c9.js",
+      "_useApi.91f10ccb.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "pages/empowersummit.vue"
+  },
+  "empowersummit.4a8d6ce1.css": {
+    "file": "empowersummit.4a8d6ce1.css",
+    "resourceType": "style"
+  },
+  "pages/event/[slug]/hero/index.css": {
+    "resourceType": "style",
+    "file": "index.5291d8ca.css",
+    "src": "pages/event/[slug]/hero/index.css"
+  },
+  "pages/event/[slug]/hero/index.vue": {
+    "resourceType": "script",
+    "module": true,
+    "assets": [
+      "Barlow-Light.c9e9410b.ttf",
+      "Barlow-Regular.77fb1ac5.ttf",
+      "Barlow-Medium.f1f57edb.ttf",
+      "Barlow-SemiBold.07ea3ff2.ttf",
+      "Barlow-Bold.984a0f81.ttf",
+      "Barlow-ExtraBold.3bbffb00.ttf",
+      "entel_fondo_2.04ea9a9f.png",
+      "ruta-entel.6ea6d2d5.jpg",
+      "hero-eventos-entel.42088b0b.jpg"
+    ],
+    "css": [],
+    "file": "index.df21dec1.js",
+    "imports": [
+      "_nuxt-link.049cd806.js",
+      "node_modules/nuxt/dist/app/entry.js",
+      "_useFormatDate.b2ce1658.js",
+      "_time.e4d8cded.js",
+      "_location.25714a4f.js",
+      "_edit.4d8cea09.js",
+      "_event.module.98d930c9.js",
+      "_useApi.91f10ccb.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "pages/event/[slug]/hero/index.vue"
+  },
+  "index.5291d8ca.css": {
+    "file": "index.5291d8ca.css",
     "resourceType": "style"
   },
   "pages/event/[slug]/index.css": {
     "resourceType": "style",
-    "file": "index.fd42d69f.css",
+    "file": "index.fad2abf4.css",
     "src": "pages/event/[slug]/index.css"
   },
   "pages/event/[slug]/index.vue": {
@@ -248,30 +351,33 @@ const client_manifest = {
       "Barlow-Medium.f1f57edb.ttf",
       "Barlow-SemiBold.07ea3ff2.ttf",
       "Barlow-Bold.984a0f81.ttf",
-      "Barlow-ExtraBold.3bbffb00.ttf"
+      "Barlow-ExtraBold.3bbffb00.ttf",
+      "entel_fondo_2.04ea9a9f.png",
+      "ruta-entel.6ea6d2d5.jpg",
+      "hero-eventos-entel.42088b0b.jpg"
     ],
     "css": [],
-    "file": "index.280dc1ea.js",
+    "file": "index.e89b7404.js",
     "imports": [
-      "_nuxt-link.35b5e431.js",
+      "_nuxt-link.049cd806.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_useFormatDate.7ad297ab.js",
-      "_time.0c32ce32.js",
-      "_location.7a83b0d9.js",
-      "_edit.b289d1a3.js",
-      "_event.module.d2e3b3ac.js",
-      "_useApi.1e0cd296.js"
+      "_useFormatDate.b2ce1658.js",
+      "_time.e4d8cded.js",
+      "_location.25714a4f.js",
+      "_edit.4d8cea09.js",
+      "_event.module.98d930c9.js",
+      "_useApi.91f10ccb.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/event/[slug]/index.vue"
   },
-  "index.fd42d69f.css": {
-    "file": "index.fd42d69f.css",
+  "index.fad2abf4.css": {
+    "file": "index.fad2abf4.css",
     "resourceType": "style"
   },
   "pages/event/[slug]/inscription/index.css": {
     "resourceType": "style",
-    "file": "index.2b32aa47.css",
+    "file": "index.e7107f76.css",
     "src": "pages/event/[slug]/inscription/index.css"
   },
   "pages/event/[slug]/inscription/index.vue": {
@@ -284,23 +390,26 @@ const client_manifest = {
       "Barlow-Medium.f1f57edb.ttf",
       "Barlow-SemiBold.07ea3ff2.ttf",
       "Barlow-Bold.984a0f81.ttf",
-      "Barlow-ExtraBold.3bbffb00.ttf"
+      "Barlow-ExtraBold.3bbffb00.ttf",
+      "entel_fondo_2.04ea9a9f.png",
+      "ruta-entel.6ea6d2d5.jpg",
+      "hero-eventos-entel.42088b0b.jpg"
     ],
     "css": [],
-    "file": "index.d2180389.js",
+    "file": "index.7ec8fd54.js",
     "imports": [
-      "_nuxt-link.35b5e431.js",
+      "_nuxt-link.049cd806.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_time.0c32ce32.js",
-      "_location.7a83b0d9.js",
-      "_event.module.d2e3b3ac.js",
-      "_useApi.1e0cd296.js"
+      "_time.e4d8cded.js",
+      "_location.25714a4f.js",
+      "_event.module.98d930c9.js",
+      "_useApi.91f10ccb.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/event/[slug]/inscription/index.vue"
   },
-  "index.2b32aa47.css": {
-    "file": "index.2b32aa47.css",
+  "index.e7107f76.css": {
+    "file": "index.e7107f76.css",
     "resourceType": "style"
   },
   "alert.1b6de979.svg": {
@@ -310,7 +419,7 @@ const client_manifest = {
   },
   "pages/event/[slug]/thanks/index.css": {
     "resourceType": "style",
-    "file": "index.4369dd05.css",
+    "file": "index.cf59dc96.css",
     "src": "pages/event/[slug]/thanks/index.css"
   },
   "pages/event/[slug]/thanks/index.vue": {
@@ -322,26 +431,70 @@ const client_manifest = {
       "Barlow-Medium.f1f57edb.ttf",
       "Barlow-SemiBold.07ea3ff2.ttf",
       "Barlow-Bold.984a0f81.ttf",
-      "Barlow-ExtraBold.3bbffb00.ttf"
+      "Barlow-ExtraBold.3bbffb00.ttf",
+      "entel_fondo_2.04ea9a9f.png",
+      "ruta-entel.6ea6d2d5.jpg",
+      "hero-eventos-entel.42088b0b.jpg"
     ],
     "css": [],
-    "file": "index.8ec86fb1.js",
+    "file": "index.acbfbcf9.js",
     "imports": [
-      "_nuxt-link.35b5e431.js",
+      "_nuxt-link.049cd806.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_event.module.d2e3b3ac.js",
-      "_useApi.1e0cd296.js"
+      "_event.module.98d930c9.js",
+      "_useApi.91f10ccb.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/event/[slug]/thanks/index.vue"
   },
-  "index.4369dd05.css": {
-    "file": "index.4369dd05.css",
+  "index.cf59dc96.css": {
+    "file": "index.cf59dc96.css",
     "resourceType": "style"
+  },
+  "pages/hero/index.css": {
+    "resourceType": "style",
+    "file": "index.30e21495.css",
+    "src": "pages/hero/index.css"
+  },
+  "pages/hero/index.vue": {
+    "resourceType": "script",
+    "module": true,
+    "assets": [
+      "logoempower.25426229.svg",
+      "Barlow-Light.c9e9410b.ttf",
+      "Barlow-Regular.77fb1ac5.ttf",
+      "Barlow-Medium.f1f57edb.ttf",
+      "Barlow-SemiBold.07ea3ff2.ttf",
+      "Barlow-Bold.984a0f81.ttf",
+      "Barlow-ExtraBold.3bbffb00.ttf",
+      "entel_fondo_2.04ea9a9f.png",
+      "ruta-entel.6ea6d2d5.jpg",
+      "hero-eventos-entel.42088b0b.jpg"
+    ],
+    "css": [],
+    "file": "index.534beaed.js",
+    "imports": [
+      "_nuxt-link.049cd806.js",
+      "_home.module.d0af78f1.js",
+      "node_modules/nuxt/dist/app/entry.js",
+      "_logo.1118a20c.js",
+      "_useApi.91f10ccb.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "pages/hero/index.vue"
+  },
+  "index.30e21495.css": {
+    "file": "index.30e21495.css",
+    "resourceType": "style"
+  },
+  "logoempower.25426229.svg": {
+    "file": "logoempower.25426229.svg",
+    "resourceType": "image",
+    "mimeType": "image/svg+xml"
   },
   "pages/index.css": {
     "resourceType": "style",
-    "file": "index.35c8535f.css",
+    "file": "index.51be2e17.css",
     "src": "pages/index.css"
   },
   "pages/index.vue": {
@@ -353,28 +506,32 @@ const client_manifest = {
       "Barlow-Medium.f1f57edb.ttf",
       "Barlow-SemiBold.07ea3ff2.ttf",
       "Barlow-Bold.984a0f81.ttf",
-      "Barlow-ExtraBold.3bbffb00.ttf"
+      "Barlow-ExtraBold.3bbffb00.ttf",
+      "entel_fondo_2.04ea9a9f.png",
+      "ruta-entel.6ea6d2d5.jpg",
+      "hero-eventos-entel.42088b0b.jpg"
     ],
     "css": [],
-    "file": "index.cf27f6ae.js",
+    "file": "index.0ede148a.js",
     "imports": [
-      "_nuxt-link.35b5e431.js",
-      "_useFormatDate.7ad297ab.js",
+      "_nuxt-link.049cd806.js",
+      "_useFormatDate.b2ce1658.js",
+      "_home.module.d0af78f1.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_useApi.1e0cd296.js",
-      "_logo.06c98b26.js",
-      "_location.7a83b0d9.js"
+      "_logo.1118a20c.js",
+      "_location.25714a4f.js",
+      "_useApi.91f10ccb.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/index.vue"
   },
-  "index.35c8535f.css": {
-    "file": "index.35c8535f.css",
+  "index.51be2e17.css": {
+    "file": "index.51be2e17.css",
     "resourceType": "style"
   },
   "pages/thanks.css": {
     "resourceType": "style",
-    "file": "thanks.64291df5.css",
+    "file": "thanks.bccb0c93.css",
     "src": "pages/thanks.css"
   },
   "pages/thanks.vue": {
@@ -386,21 +543,24 @@ const client_manifest = {
       "Barlow-Medium.f1f57edb.ttf",
       "Barlow-SemiBold.07ea3ff2.ttf",
       "Barlow-Bold.984a0f81.ttf",
-      "Barlow-ExtraBold.3bbffb00.ttf"
+      "Barlow-ExtraBold.3bbffb00.ttf",
+      "entel_fondo_2.04ea9a9f.png",
+      "ruta-entel.6ea6d2d5.jpg",
+      "hero-eventos-entel.42088b0b.jpg"
     ],
     "css": [],
-    "file": "thanks.4851323e.js",
+    "file": "thanks.9654a934.js",
     "imports": [
-      "_nuxt-link.35b5e431.js",
+      "_nuxt-link.049cd806.js",
       "node_modules/nuxt/dist/app/entry.js",
-      "_event.module.d2e3b3ac.js",
-      "_useApi.1e0cd296.js"
+      "_event.module.98d930c9.js",
+      "_useApi.91f10ccb.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/thanks.vue"
   },
-  "thanks.64291df5.css": {
-    "file": "thanks.64291df5.css",
+  "thanks.bccb0c93.css": {
+    "file": "thanks.bccb0c93.css",
     "resourceType": "style"
   },
   "public/assets/font/barlow/Barlow-Bold.ttf": {
@@ -438,6 +598,18 @@ const client_manifest = {
     "mimeType": "font/ttf",
     "file": "Barlow-SemiBold.07ea3ff2.ttf",
     "src": "public/assets/font/barlow/Barlow-SemiBold.ttf"
+  },
+  "public/assets/img/entel_fondo_2.png": {
+    "resourceType": "image",
+    "mimeType": "image/png",
+    "file": "entel_fondo_2.04ea9a9f.png",
+    "src": "public/assets/img/entel_fondo_2.png"
+  },
+  "public/assets/img/hero-eventos-entel.jpg": {
+    "resourceType": "image",
+    "mimeType": "image/jpeg",
+    "file": "hero-eventos-entel.42088b0b.jpg",
+    "src": "public/assets/img/hero-eventos-entel.jpg"
   },
   "public/assets/img/icons/alert.svg": {
     "resourceType": "image",
@@ -481,6 +653,18 @@ const client_manifest = {
     "file": "logo.2dbbcef4.svg",
     "src": "public/assets/img/logo.svg"
   },
+  "public/assets/img/logoempower.svg": {
+    "resourceType": "image",
+    "mimeType": "image/svg+xml",
+    "file": "logoempower.25426229.svg",
+    "src": "public/assets/img/logoempower.svg"
+  },
+  "public/assets/img/ruta-entel.jpg": {
+    "resourceType": "image",
+    "mimeType": "image/jpeg",
+    "file": "ruta-entel.6ea6d2d5.jpg",
+    "src": "public/assets/img/ruta-entel.jpg"
+  },
   "virtual:nuxt:C:/Users/Bj Cruz/Documents/GitHub/entel-eventos/.nuxt/error-component.mjs": {
     "resourceType": "script",
     "module": true,
@@ -488,7 +672,7 @@ const client_manifest = {
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "error-component.2d80134e.js",
+    "file": "error-component.1d755309.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],

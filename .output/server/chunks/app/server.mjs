@@ -828,12 +828,28 @@ const unhead_KgADcZ0jPj = /* @__PURE__ */ defineNuxtPlugin({
 });
 const _routes = [
   {
+    name: "empowersummit",
+    path: "/empowersummit",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/empowersummit-929980ad.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "event-slug-hero",
+    path: "/event/:slug()/hero",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/index-cfdd9d5d.mjs').then((m) => m.default || m)
+  },
+  {
     name: "event-slug",
     path: "/event/:slug()",
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-e08e88b5.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-7b20d862.mjs').then((m) => m.default || m)
   },
   {
     name: "event-slug-inscription",
@@ -841,7 +857,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-858e33fd.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-eb4d0a49.mjs').then((m) => m.default || m)
   },
   {
     name: "event-slug-thanks",
@@ -849,7 +865,15 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-d10997fe.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-09328db9.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "hero",
+    path: "/hero",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/index-c1632675.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -857,7 +881,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-585f402f.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-4e9858d8.mjs').then((m) => m.default || m)
   },
   {
     name: "thanks",
@@ -865,7 +889,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/thanks-788cb95a.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/thanks-b168c4de.mjs').then((m) => m.default || m)
   }
 ];
 const routerOptions0 = {
@@ -1143,7 +1167,7 @@ const _wrapIf = (component, props, slots) => {
   } };
 };
 const layouts = {
-  default: () => import('./_nuxt/default-20e4bbb1.mjs').then((m) => m.default || m)
+  default: () => import('./_nuxt/default-1daf64a4.mjs').then((m) => m.default || m)
 };
 const LayoutLoader = /* @__PURE__ */ defineComponent({
   name: "LayoutLoader",
