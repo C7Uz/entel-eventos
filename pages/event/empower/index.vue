@@ -1038,8 +1038,6 @@ gap: 14px;
 align-self: stretch;
 }
 
-
-
 .speaker-avatar {
   width: 56px;
   height: 56px;
