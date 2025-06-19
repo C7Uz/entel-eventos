@@ -111,9 +111,9 @@ export default defineComponent({
 
 <template>
 	<div class="w-full h-full">
-		<section class="relative h-screen"
-			v-bind:style="{ background: 'linear-gradient(0deg, rgba(0, 17, 92, 0.5), rgba(0, 17, 92, 0.5)), url(' + background + ')' }"
-			style="background-repeat: no-repeat; background-size: cover; background-position: center;">
+		<section class="relative h-screen fondo-hero"> 
+		 
+		
 
 			<div class="container  relative isolate h-full w-full">
 				<div class="relative max-w-7xl px-6 py-20">
