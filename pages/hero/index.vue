@@ -189,8 +189,11 @@ export default defineComponent({
 												</h2>
 												<p class="mt-2 text-white/80">Impulsando el futuro de <span class="font-semibold">tu empresa</span></p>
 											<div>
-											<span class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap width-peque-button  hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
-																		Ver evento</span>   </div>  
+											<div class="flex items-center justify-center gap-x-2 text-primary mt-2">
+													<NuxtLink :to="'/event/'" class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap md:width-peque-button max-w-full hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
+													Ver evento
+												</NuxtLink>
+												</div>
 										</div>
 									</article>
 								</div>
@@ -199,8 +202,11 @@ export default defineComponent({
 											<div class=" items-center justify-center"  > 
 								<h2 class="text-entel-ruta">La Ruta Entel<br />Empresas</h2>
 								<p class="sub-text-entel-ruta">¡Contenido de valor para potenciar tu empresa!</p>   
-								<div><span class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap width-peque-button  hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
-																					Ver fechas</span></div>
+										<div class="flex items-center justify-center gap-x-2 text-primary mt-2">
+													<NuxtLink :to="'/'" class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap md:width-peque-button max-w-full hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
+													Ver fechas
+												</NuxtLink>
+												</div>
 							</div>
 									</article>
 								</div>
