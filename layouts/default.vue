@@ -77,7 +77,7 @@ onMounted(()=>{
 <template>
 	<div class="w-full h-full" :class="[settingModule.settings.theme]">
 		<header class="container-fluid absolute inset-x-0 top-0 left-0 z-50 h-header transition duration-3 fixed-header" v-if="settingModule.settings.showHeader">
-			<div class=" h-full fondo-navbar">
+			<div class=" h-full">
 				<nav class="flex items-center justify-between py-2 h-full" aria-label="Global">
 					<div class="flex lg:flex-1">
 						<NuxtLink to="/" class="-m-1.5 p-1.5">

@@ -119,7 +119,7 @@ onBeforeMount(async () => {
 	settingModule.setShowFooter(false)
 	settingModule.setShowHeader(true)
 
-	await eventModule.findOne('EMPOWER')
+	await eventModule.findOne('empower')
  
 	if(!eventModule.event){
 		window.location.href = '/';
