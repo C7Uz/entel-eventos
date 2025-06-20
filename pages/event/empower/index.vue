@@ -28,30 +28,33 @@ onBeforeMount(async () => {
  
 </script>
 <template>
+<section class="hidden md:block container-fluid absolute inset-x-0 top-0 left-0 z-50 h-header transition duration-3 fixed-header">
+    <div class="h-full fondo-navbar">
+        <nav class="flex items-center justify-between py-2 h-full" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <NuxtLink to="/" class="-m-1.5 p-1.5">
+                    <img class="h-8 w-auto logo-white" src="~/public/assets/img/logo.svg" alt="">
+                    <img class="h-8 w-auto logo-color" src="~/public/assets/img/logo-color.svg" alt="">
+                </NuxtLink>
+            </div>
+            <div class="flex md:flex">
+                <NuxtLink :to="'/event/empower/inscription'" type="button" class="w-max bg-primary text-white text-center font-medium py-2 px-4 rounded-full text-base flex items-center justify-center hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
+                    <img class="w-4 mr-2" src="~/public/assets/img/icons/edit.svg" alt="">
+                    Inscribirme
+                </NuxtLink>
+            </div>
+        </nav>
+    </div>
+</section>
 	<div class="w-full h-full bg-darkblue" >
+
+
 		<section 
 		class="relative h-screen fondo-hero-2" >
 			
 		
 				<div class="relative isolate pt-14 h-full w-full">
-				<section class="container-fluid absolute inset-x-0 top-0 left-0 z-50 h-header transition duration-3 fixed-header"  >
-			<div class=" h-full fondo-navbar">
-				<nav class="flex items-center justify-between py-2 h-full" aria-label="Global">
-					<div class="flex lg:flex-1">
-						<NuxtLink to="/" class="-m-1.5 p-1.5">
-							<img class="h-8 w-auto logo-white" src="~/public/assets/img/logo.svg" alt="">
-							<img class="h-8 w-auto logo-color" src="~/public/assets/img/logo-color.svg" alt="">
-						</NuxtLink>
-					</div>
-					<div class="hidden md:flex">
-						<NuxtLink :to="'/event/empower/inscription'" type="button" class="w-max bg-primary text-white text-center font-medium py-2 px-4 rounded-full text-base flex items-center justify-center hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed" >
-							<img class="w-4 mr-2" src="~/public/assets/img/icons/edit.svg" alt="">
-							Inscribirme
-						</NuxtLink>
-					</div>
-				</nav>
-			</div>
-		</section>
+			
 
 					<div class="container-2 w-full h-full flex flex-col justify-start md:justify-center ">
 						<div class="flex flex-col items-center justify-center text-white text-sm">
@@ -109,7 +112,7 @@ onBeforeMount(async () => {
 			
 			</div>
 			</section>
-			<section class="container-2 w-full h-full flex flex-col mt-12 pb-4"> 
+			<section class="container-2 contenedores-ad w-full h-full flex flex-col mt-12 pb-4"> 
 								<div class="event-details-card">
 					<h2 class="event-title">Detalles del evento</h2>
 					
@@ -162,7 +165,7 @@ onBeforeMount(async () => {
 				</div>
 				
 			</section>
-			<section class="container-2 w-full h-full flex flex-col mt-12 pb-4"> 
+			<section class="container-2 contenedores-ad w-full h-full flex flex-col mt-12 pb-4"> 
 					<div class="topics-carousel">
     <div class="container">
       <!-- Título -->
@@ -207,7 +210,7 @@ onBeforeMount(async () => {
   </div>
 			</section>
 
-      <section class="container-2 w-full h-full flex flex-col mt-12 pb-4 ">
+      <section class="container-2  contenedores-ad w-full h-full flex flex-col mt-12 pb-4 ">
           <div class="w-full agenda-container items-center justify-center">
                <div class="items-center"> <h2 class="title text-gradient title-center">Agenda Empower Summit</h2></div>
               <div 
@@ -309,7 +312,12 @@ onBeforeMount(async () => {
 				</div>
 			</div>
 		</section>
-
+<div class="fixed left-0 bottom-0 lg:hidden flex flex-col items-center justify-center w-full z-20 p-6">
+   <NuxtLink :to="'/event/empower/inscription'" type="button" class="w-max bg-primary text-white text-center font-medium py-2 px-4 rounded-full text-base flex items-center justify-center hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
+                    <img class="w-4 mr-2" src="~/public/assets/img/icons/edit.svg" alt="">
+                    Inscribirme
+   </NuxtLink>  
+</div>
 
 		</main>
 	</div>
@@ -1159,6 +1167,13 @@ aspect-ratio: 1/1;
   gap: 10px;
 }
 
+/* Ocultar en teléfonos (hasta 767px) */
+@media (max-width: 767px) {
+  .time-icon {
+    display: none;
+  }
+}
+
 .agenda-details h3 {
   font-size: 16px;
   font-weight: 500;
@@ -1236,43 +1251,58 @@ align-self: stretch;
 
 }
 
+
 .speaker {
- display: flex;
-padding: 0px 52px;
-align-items: center;
-gap: 14px;
-align-self: stretch;
+    display: flex;
+    padding: 0px 52px;
+    align-items: center;
+    gap: 14px;
+    align-self: stretch;
 }
+
 
 .speaker-avatar {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  float: right;
-  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 24px;
-align-self: stretch;
+    width: 56px;
+    aspect-ratio: 1 / 1; /* Mantiene siempre la relación 1:1 */
+    border-radius: 50%;
+    float: right;
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+.speaker-info h4 {
+    color: var(--on-white, #FFF); 
+    /* Medium/H6 */
+    font-family: Barlow;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+
 }
 
-.speaker-info h4 {
-color: var(--on-white, #FFF); 
-/* Medium/H6 */
+.speaker-title {
+  color: var(--primary-100, #B7C4FF);
+align-self: right;
+  /* Regular/Small */
+/* Regular/Small */
 font-family: Barlow;
-font-size: 20px;
+font-size: 14px;
 font-style: normal;
-font-weight: 500;
-line-height: 30px; /* 150% */
-
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-gap: 8px;
-flex: 1 0 0;
-
+font-weight: 400;
+line-height: 140%; /* 19.6px */
+width: 100%;
+ 
 }
 
 .linea-speaker {
@@ -1294,19 +1324,7 @@ height: 1px;
 
 }
 
-.speaker-title {
-  color: var(--primary-100, #B7C4FF);
-align-self: right;
-  /* Regular/Small */
-/* Regular/Small */
-font-family: Barlow;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 140%; /* 19.6px */
-width: 100%;
- 
-}
+
 
 /* Transiciones para el expand */
 .expand-enter-active,
@@ -1356,6 +1374,27 @@ width: 100%;
     width: 10vw;
     pointer-events: none;
     z-index: 1;
+}
+.contenedores-ad {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.contenedores-ad::before   {
+   content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    background: 
+        linear-gradient(to top, rgba(0,0,0,0) 0%, transparent 100%),
+        url('../assets/img/base_degrade.png');
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    pointer-events: none;
 }
 
 /* Degradado derecho */
