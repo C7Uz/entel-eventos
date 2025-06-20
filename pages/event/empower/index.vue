@@ -382,7 +382,7 @@ export default {
         },
         {
           id: 2,
-          time: '9:30 am',
+          time: '9:00 am',
           title: 'Bienvenida a cargo de Entel',
           type: 'break',
           image: '../assets/img/icons/entel.png',
@@ -390,28 +390,28 @@ export default {
         },
         {
           id: 3,
-          time: '9:50 am',
+          time: '9:25 am',
           title: 'Digitalización en el mundo de los negocios en Perú',
           tag: 'Charla de apertura',
           expandable: true,
           expanded: false,
           image: '../assets/img/icons/speaker.png',
-          description: 'Cuál es el impacto de la digitalización en la economía empresarial peruana, identificando tendencias, desafíos y oportunidades que enfrentan las empresas al adoptar tecnologías digitales y cómo esto transforma sectores clave para impulsar el crecimiento y la eficiencia en los negocios.',
+          description: 'Cuál es el impacto de la digitalización en el entorno empresarial peruano, destacando tendencias, desafíos y estrategias clave para enfrentar el futuro. Se explorarán las oportunidades que ofrece la transformación digital para impulsar el crecimiento y la eficiencia en las organizaciones.',
           speaker: {
             name: 'Iván Portocaero',
             foto: '../assets/img/expositores/ivan_portocarrero.png', 
-            title: 'Director de Análisis Estratégico del Sector de Energía y Telecomunicaciones'
+            title: 'Director de análisis sectorial y de proyectos del Servicio de Asesoría Empresarial (SAE).'
           }
         },
         {
           id: 4,
-          time: '10:30 am',
+          time: '10:00 am',
           title: 'La IA en el negocio, ¿están listos para trabajar con un copilot?',
           tag: 'Microsoft',
           expandable: true,
           expanded: false,
           image: '../assets/img/icons/speaker.png',
-          description: 'Cómo la Inteligencia Artificial está siendo la ser una promesa futura para convertirse en una herramienta concreta en la forma de decisiones, la productividad y la innovación.',
+          description: 'Cómo la Inteligencia Artificial está dejando de ser una promesa futura para convertirse en una herramienta concreta en la toma de decisiones, la productividad y la innovación.',
           speaker: {
             name: 'Raul Campos',
             foto: '../assets/img/expositores/raul_campos.png',
@@ -420,51 +420,52 @@ export default {
         },
         {
           id: 5,
-          time: '11:20 am',
-          title: 'Optimiza operaciones, mejora la eficiencia y eleva la seguridad con OPTI ONE',
-          tag: 'OPTI',
+          time: '10:20 am',
+          title: 'Optimiza operaciones, mejora la eficiencia y eleva la seguridad con SOTI ONE',
+          tag: 'SOTI',
           expandable: true,
           expanded: false,
           image: '../assets/img/icons/speaker.png',
-          description: 'Cómo la Plataforma OPTI ONE permite que las organizaciones optimicen de forma centralizada sus capacidades únicas transformando la productividad y liderando el cambio. Mejorando las operaciones del negocio, aumentando la productividad y fortaleciendo la seguridad.',
+          description: 'Cómo la Plataforma SOTI ONE permite que las organizaciones gestionen de forma centralizada sus dispositivos móviles, aplicaciones y endpoints, optimizando así las operaciones críticas del negocio, aumentando la productividad  y fortaleciendo la seguridad.',
           speaker: {
-            name: 'José Antonio Martínez',
+            name: 'José Antonio Martinez',
             foto: '../assets/img/expositores/jose_antonio_martinez.png', 
             title: 'Business Partner and Alliances Sales LATAM'
           }
         },
         {
           id: 6,
-          time: '12:00 pm',
-          title: 'De Red Segura la Seguridad como Servicio. El Camino hacia SASE',
+          time: '10:40 am',
+          title: 'De la Red Segura a la Seguridad como Servicio: El Camino hacia SASE',
           tag: 'Fortinet',
           expandable: true,
           expanded: false,
           image: '../assets/img/icons/speaker.png',
-          description: 'La evolución de la seguridad perimetral hacia SASE marca un cambio fundamental en seguridad y conectividad en la nube con inteligencia artificial para anticipar amenazas. Esto permite una protección más ágil y coherente en el entorno digital actual que se adapta a las necesidades empresariales actuales y futuras con una experiencia continua e inteligente.',
+          description: 'La evolución de la seguridad gestionada hacia SASE marca un cambio clave: integrar red y seguridad en la nube con inteligencia artificial para anticipar amenazas. Esto permite una protección más ágil y contextual en un entorno digital cada vez más distribuido. La seguridad ya no es un perímetro, es una experiencia continua e inteligente.',
           speaker: {
-            name: 'Tomás Azmat',
-            foto: '../assets/img/expositores/jose_antonio_martinez.png', 
-            title: 'SE Technical Engineer'
+            name: 'Tomás Asmat',
+            foto: '../assets/img/expositores/tomas_asmat.png', 
+            title: 'Sr. Systems Engineer'
           }
         },
         {
           id: 7,
-          time: '12:40 pm',
+          time: '11:00 am',
           title: 'Coffee Break',
           type: 'break',
+          tag: 'Zona Break',
           image: '../assets/img/icons/coffee.png',
           expandable: false
         },
         {
           id: 8,
-          time: '1:20 pm',
+          time: '11:30 am',
           title: 'Mejorando la experiencia del cliente con IA conversacional',
-          tag: 'Vonage',
+          tag: 'Infobip',
           expandable: true,
           expanded: false,
           image: '../assets/img/icons/speaker.png',
-          description: 'Cómo la IA conversacional está cambiando la forma en que las empresas gestionan la relación con sus clientes. Ofrecemos soluciones de vanguardia que permiten a las organizaciones brindar un servicio personalizado y eficiente a través de canales digitales que se conectan.',
+          description: 'Cómo la IA conversacional está cambiando la forma en que las empresas gestionan la relación con sus usuarios. Descubre estrategias y soluciones prácticas para transformar la forma en que te conectas.',
           speaker: {
             name: 'Maurice Falcón',
             foto: '../assets/img/expositores/maurice_falcon.png',
@@ -473,28 +474,28 @@ export default {
         },
         {
           id: 9,
-          time: '2:00 pm',
-          title: 'Haz Acti tu Antivirus: Cómo Modernizar la Gestión y Seguridad de TI con Acronis',
+          time: '11:50 am',
+          title: 'Más Allá del Antivirus: Cómo Modernizar la Gestión y Seguridad de TI con Acronis',
           tag: 'Acronis',
           expandable: true,
           expanded: false,
           image: '../assets/img/icons/speaker.png',
-          description: 'Descubre cómo modernizar la seguridad de TI con Acronis, integrando protección avanzada, automatización y gestión simplificada para enfrentar las amenazas actuales de manera eficaz.',
+          description: 'Descubre cómo modernizar la seguridad de TI con Acronis, integrando protección avanzada, automatización y gestión centralizada desde una sola consola.',
           speaker: {
             name: 'Guillermo Márquez',
             foto: '../assets/img/expositores/guillermo_marquez.png',
-            title: 'Senior Especialista Acronis'
+            title: 'Senior Evangelist, Americas'
           }
         },
         {
           id: 10,
-          time: '2:40 pm',
-          title: 'Innovación sin Límites: El Enfoque APM para la Transformación de Negocios',
-          tag: 'Atlassian Web Services',
+          time: '12:10 pm',
+          title: 'Innovación sin Límites: El Enfoque AWS para la Transformación de Negocios',
+          tag: 'Amazon Web Services',
           expandable: true,
           expanded: false,
           image: '../assets/img/icons/speaker.png',
-          description: 'Explora la innovación con nuestras soluciones avanzadas que potencian empresas a través del Application Performance Monitoring (APM). Descubre cómo nuestras herramientas transforman los procesos empresariales, optimizan la experiencia del cliente e impulsan la transformación digital y la innovación en cada proyecto de negocios.',
+          description: 'Frente a la necesidad creciente de las empresas peruanas por acelerar su transformación digital, exploraremos el enfoque peculiar de AWS, en donde nos enfocamos en los desafíos empresariales de nuestros clientes para crear soluciones de nube innovadoras, seguras y costo-eficientes que revolucionan los procesos de negocio.',
           speaker: {
             name: 'Diego Silva',
             foto: '../assets/img/expositores/diego_silva.png',
@@ -503,7 +504,7 @@ export default {
         },
         {
           id: 11,
-          time: '3:20 pm',
+          time: '12:30 pm',
           title: 'Cierre',
           type: 'closing',
           image: '../assets/img/icons/handshake.png',
