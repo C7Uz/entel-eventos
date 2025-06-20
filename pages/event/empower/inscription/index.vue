@@ -119,9 +119,12 @@ onBeforeMount(async () => {
 	settingModule.setShowFooter(false)
 	settingModule.setShowHeader(true)
 
-	await eventModule.findOne('Cusco')
+	await eventModule.findOne('EMPOWER')
  
-	form.value.event = 3
+	if(!eventModule.event){
+		window.location.href = '/';
+	}
+	form.value.event = eventModule.event.id
 
 	console.log('eventModule.event', form.value.event)
 })
