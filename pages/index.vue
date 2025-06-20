@@ -110,7 +110,30 @@ export default defineComponent({
 
 
 <template>
+
+
 	<div class="w-full h-full">
+
+
+		<section class="container-fluid absolute inset-x-0 top-0 left-0 z-50 h-header transition duration-3 fixed-header" v-if="true">
+			<div class=" h-full fondo-navbar">
+				<nav class="flex items-center justify-between py-2 h-full" aria-label="Global">
+					<div class="flex lg:flex-1">
+						<NuxtLink to="/" class="-m-1.5 p-1.5">
+							<img class="h-8 w-auto logo-white" src="~/public/assets/img/logo.svg" alt="">
+							<img class="h-8 w-auto logo-color" src="~/public/assets/img/logo-color.svg" alt="">
+						</NuxtLink>
+					</div>
+					<div class="hidden md:flex">
+						<NuxtLink :to="'/event/empower/inscription'" type="button" class="w-max bg-primary text-white text-center font-medium py-2 px-4 rounded-full text-base flex items-center justify-center hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed" v-if="2">
+							<img class="w-4 mr-2" src="~/public/assets/img/icons/edit.svg" alt="">
+							Inscribirme
+						</NuxtLink>
+					</div>
+				</nav>
+			</div>
+		</section>
+
 		<section class="relative h-screen fondo-hero"> 
 		 
 		
@@ -164,7 +187,7 @@ export default defineComponent({
 								<h2 class="text-entel-ruta">La Ruta Entel<br />Empresas</h2><br />
 								<p class="sub-text-entel-ruta">¡Contenido de valor para potenciar tu empresa!</p>   
 								<div class="flex items-center justify-center gap-x-2 text-primary mt-2">
-													<NuxtLink :to="'/'" class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap md:width-peque-button max-w-full hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
+													<NuxtLink :to="'/laruta'" class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap md:width-peque-button max-w-full hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
 													Ver fechas
 												</NuxtLink>
 												</div>
@@ -199,7 +222,7 @@ export default defineComponent({
 								<h2 class="text-entel-ruta">La Ruta Entel<br />Empresas</h2>
 								<p class="sub-text-entel-ruta">¡Contenido de valor para potenciar tu empresa!</p>   
 										<div class="flex items-center justify-center gap-x-2 text-primary mt-2">
-													<NuxtLink :to="'/'" class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap md:width-peque-button max-w-full hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
+													<NuxtLink :to="'/laruta'" class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap md:width-peque-button max-w-full hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
 													Ver fechas
 												</NuxtLink>
 												</div>

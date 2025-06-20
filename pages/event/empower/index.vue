@@ -22,12 +22,12 @@ onBeforeMount(async () => {
 	settingModule.setShowFooter(false)
 	settingModule.setShowHeader(true)
 
-	await eventModule.findOne('TRUJILLO')
+	await eventModule.findOne('EMPOWER')
 	if(!eventModule.event){
-		window.location.href = '/';
+		window.location.href = '/laruta';
 	}
 
-	settingModule.setEventId('TRUJILLO')
+	settingModule.setEventId('EMPOWER')
 
 })
  
