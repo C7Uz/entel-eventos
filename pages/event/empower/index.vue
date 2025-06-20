@@ -24,7 +24,7 @@ onBeforeMount(async () => {
 
 	await eventModule.findOne('EMPOWER')
 	 
-	settingModule.setEventId('EMPOWER')
+	settingModule.setEventId(eventModule.event.slug)
 
 })
  
