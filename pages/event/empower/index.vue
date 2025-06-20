@@ -22,21 +22,36 @@ onBeforeMount(async () => {
 	settingModule.setShowFooter(false)
 	settingModule.setShowHeader(true)
 
-	await eventModule.findOne('EMPOWER')
-	 
-	settingModule.setEventId(eventModule.event.slug)
 
+  console.log(settingModule)
 })
  
 </script>
 <template>
-	<div class="w-full h-full bg-darkblue" v-if="eventModule.event">
+	<div class="w-full h-full bg-darkblue" >
 		<section 
 		class="relative h-screen fondo-hero-2" >
 			
 		
 				<div class="relative isolate pt-14 h-full w-full">
-				
+				<section class="container-fluid absolute inset-x-0 top-0 left-0 z-50 h-header transition duration-3 fixed-header"  >
+			<div class=" h-full fondo-navbar">
+				<nav class="flex items-center justify-between py-2 h-full" aria-label="Global">
+					<div class="flex lg:flex-1">
+						<NuxtLink to="/" class="-m-1.5 p-1.5">
+							<img class="h-8 w-auto logo-white" src="~/public/assets/img/logo.svg" alt="">
+							<img class="h-8 w-auto logo-color" src="~/public/assets/img/logo-color.svg" alt="">
+						</NuxtLink>
+					</div>
+					<div class="hidden md:flex">
+						<NuxtLink :to="'/event/empower/inscription'" type="button" class="w-max bg-primary text-white text-center font-medium py-2 px-4 rounded-full text-base flex items-center justify-center hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed" >
+							<img class="w-4 mr-2" src="~/public/assets/img/icons/edit.svg" alt="">
+							Inscribirme
+						</NuxtLink>
+					</div>
+				</nav>
+			</div>
+		</section>
 
 					<div class="container-2 w-full h-full flex flex-col justify-start md:justify-center ">
 						<div class="flex flex-col items-center justify-center text-white text-sm">
