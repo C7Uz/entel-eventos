@@ -23,10 +23,7 @@ onBeforeMount(async () => {
 	settingModule.setShowHeader(true)
 
 	await eventModule.findOne('EMPOWER')
-	if(!eventModule.event){
-		window.location.href = '/laruta';
-	}
-
+	 
 	settingModule.setEventId('EMPOWER')
 
 })
