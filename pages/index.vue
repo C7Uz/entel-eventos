@@ -160,8 +160,8 @@ export default defineComponent({
 				<div class=" min-w-50 w-1/2  mt-6"  >
 					<div class=" flex pr-4" >
 						<article  class="wdt-t items-center justify-center fondo-rutas min-h-128 flex flex-col lg:flex-row box-shadow-default w-full relative overflow-hidden bg-gray rounded-2xl">
-							<div class=" items-center justify-center"  > 
-								<h2 class="text-entel-ruta">La Ruta Entel<br />Empresas</h2>
+							<div class=" items-center justify-center m-w-300"  > 
+								<h2 class="text-entel-ruta">La Ruta Entel<br />Empresas</h2><br />
 								<p class="sub-text-entel-ruta">¡Contenido de valor para potenciar tu empresa!</p>   
 								<div class="flex items-center justify-center gap-x-2 text-primary mt-2">
 													<NuxtLink :to="'/'" class="w-full bg-primary text-white text-center font-medium py-2.5 px-16 text-base hover:text-white mt-8 rounded-full text-l flex items-center justify-center whitespace-nowrap md:width-peque-button max-w-full hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">

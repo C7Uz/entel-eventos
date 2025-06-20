@@ -7,7 +7,7 @@ const settingModule = useSetting()
 const eventModule = useEvent()
 const route = useRoute()
 
-
+const currentYear = new Date().getFullYear()
 
 onBeforeMount(async () => {
 	/* @ts-ignore */
@@ -35,7 +35,7 @@ onBeforeMount(async () => {
 <template>
 	<div class="w-full h-full bg-darkblue" v-if="eventModule.event">
 		<section 
-		class="relative h-screen fondo-hero" >
+		class="relative h-screen fondo-hero-2" >
 			
 		
 				<div class="relative isolate pt-14 h-full w-full">
@@ -76,19 +76,19 @@ onBeforeMount(async () => {
 		<main class="bg-darkblue">
 		 <section class="container-2 w-full h-full flex flex-col mt-12 pb-4">
 				 <div class=" md:flex flex-wrap sm-pr-0">
-				<div class=" min-w-50 w-1/2 "  >
+				<div class="w-full md:w-1/2 md:min-w-50">
 					<div class=" flex pr-4" >
-						<article  class="items-center justify-center min-h-64 flex flex-col lg:flex-row  w-full relative overflow-hidden bg-gray rounded-2xl">
-							<div class="items-center justify-center"  > 
+						<article class=" gap-16 items-center justify-center lg:min-h-64 flex flex-col lg:flex-row w-full relative overflow-hidden bg-gray rounded-2xl">
+							<div class="items-center justify-center "  > 
 								<span class="text-gradient">Sumérgete en el futuro de la tecnología y la innovación</span>
 							</div>
 						</article>
 					</div>
 				</div>
-				<div class=" min-w-50 w-1/2  "  >
+				<div class="w-full md:w-1/2 md:min-w-50"  >
 					<div class=" flex pr-4" >
-						<article  class="wdt-t items-center justify-center min-h-64 flex flex-col lg:flex-row  w-full relative overflow-hidden bg-gray rounded-2xl">
-								<div class="items-center justify-center"  > 
+						<article class=" gap-16 items-center justify-center lg:min-h-64 flex flex-col lg:flex-row w-full relative overflow-hidden bg-gray rounded-2xl">
+								<div class="items-center justify-center "  > 
 								<span class="text-par">Únete a líderes de la industria y nuestros partners estratégicos en un espacio diseñado para compartir conocimientos, descubrir nuevas soluciones tecnológicas y fortalecer conexiones clave. Disfruta de conferencias de alto nivel que impulsarán el crecimiento de tu empresa en un entorno de constante evolución, brindándote herramientas para avanzar en el camino hacia la transformación digital.</span>
 							</div>
 						</article>
@@ -190,28 +190,20 @@ onBeforeMount(async () => {
         </button>
       </div>
 
-      <!-- Indicadores de página -->
-      <div class="indicators">
-        <button
-          v-for="(_, index) in Math.max(1, topics.length - 2)"
-          :key="index"
-          @click="goToSlide(index)"
-          :class="['indicator', { active: index === currentIndex }]"
-        ></button>
-      </div>
+     
     </div>
   </div>
 			</section>
 
       <section class="container-2 w-full h-full flex flex-col mt-12 pb-4 ">
           <div class="w-full agenda-container items-center justify-center">
-               <div class="items-center"> <h2 class="title text-gradient">Agenda Empower Summit</h2></div>
+               <div class="items-center"> <h2 class="title text-gradient title-center">Agenda Empower Summit</h2></div>
               <div 
                 v-for="item in agendaItems" 
                 :key="item.id" 
                 :class="['agenda-item', { 
-                  'break-item': item.type === 'break', 
-                  'closing-item': item.type === 'closing' 
+                   'closing-item': item.expanded === true, 
+                  ' ': item.expanded === false 
                 }]"
                 @click="item.expandable ? toggleExpand(item.id) : null"
               >
@@ -219,8 +211,8 @@ onBeforeMount(async () => {
                   <div class="agenda-info">
                     <div class="time-icon"><img class="agenda-ico" :src="item.image" /></div>
                     <div class="agenda-details">
-                      <h3>{{ item.title }}</h3>
                       <div class="agenda-time">{{ item.time }}</div>
+                      <h3>{{ item.title }}</h3>
                       <div v-if="item.tag" class="agenda-tag">{{ item.tag }}</div>
                     </div>
                     
@@ -260,6 +252,53 @@ onBeforeMount(async () => {
       </section>
 
 
+      <section class="container-2 w-full h-full flex flex-col mt-12 pb-4 ">
+                  <h2 class="title text-gradient">Partners</h2>
+                  <div class="marentel-partners-carousel">
+            <div class="marentel-carousel-container"> 
+              
+              <div class="marentel-carousel-wrapper">
+                <div 
+                  class="marentel-carousel-track"
+                  :style="{ transform: `translateX(-${currentIndexMarentel * itemWidth}px)` }"
+                >
+                  <div 
+                    v-for="(partner, index) in extendedPartners" 
+                    :key="`${partner.name}-${index}`"
+                    class="marentel-carousel-item"
+                  >
+                    <div class="marentel-partner-card">
+                      <img 
+                        :src="partner.logo" 
+                        :alt="`${partner.name} logo`"
+                        class="marentel-partner-logo"
+                        @error="marentelHandleImageError"
+                      />
+                      <span class="marentel-partner-name">{{ partner.name }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+
+
+
+      </section>
+
+<section class="container-fluid w-full h-footer bg-darkblue " >
+			<div class="container h-full">
+				<div class="w-full h-full flex items-center justify-between my-auto">
+					<span class="font-normal text-xs text-white">Copyright {{currentYear}}. Todos los derechos reservados.</span>
+					<a href="#" class="-m-1.5 p-1.5">
+						<img class="h-8 w-auto" src="~/public/assets/img/logo.svg" alt="">
+					</a>
+				</div>
+			</div>
+		</section>
+
+
 		</main>
 	</div>
 </template>
@@ -272,6 +311,9 @@ export default {
     return {
       // Topics Carousel data
       currentIndex: 0,
+      currentIndexMarentel: 0,
+      itemWidth: 280, // Ancho de cada item
+      autoplayInterval: null as ReturnType<typeof setInterval> | null,
       topics: [
         {
           id: 1,
@@ -307,14 +349,7 @@ export default {
           icon: "fas fa-cogs",
           gradient: "from-purple-500 to-pink-500",
           background: "../assets/img/automatizacion.png"
-        },
-        {
-          id: 6,
-          title: "Análisis de Datos",
-          icon: "fas fa-chart-bar",
-          gradient: "from-cyan-500 to-blue-500",
-          background: "../assets/img/automatizacion.png"
-        },
+        }, 
         {
           id: 7,
           title: "Eficiencia Operativa",
@@ -462,8 +497,57 @@ export default {
           image: '../assets/img/icons/handshake.png',
           expandable: false
         }
-      ]
+      ],
+       
+      partners: [
+        { 
+          name: 'Acronis', 
+          logo: '../assets/img/marcas/acronis.png'
+        },
+        { 
+          name: 'AWS', 
+          logo: '../assets/img/marcas/aws.png'
+        },
+        { 
+          name: 'Fortinet', 
+          logo: '../assets/img/marcas/fortinet.png'
+        },
+        { 
+          name: 'Honor', 
+          logo: '../assets/img/marcas/honor.png'
+        },
+        { 
+          name: 'Infobip', 
+          logo: '../assets/img/marcas/infobip.png'
+        },
+        { 
+          name: 'Microsoft', 
+          logo: '../assets/img/marcas/microsoft.png'
+        },
+        { 
+          name: 'Samsung', 
+          logo: '../assets/img/marcas/samsung.png'
+        },
+        { 
+          name: 'Soti', 
+          logo: '../assets/img/marcas/soti.png'
+        }
+      ]    
+      }
+  },
+   computed: {
+    extendedPartners() {
+      // Duplicamos el array para crear el efecto infinito
+      return [...this.partners, ...this.partners]
     }
+  },
+  mounted() {
+    this.marentelStartAutoplay()
+    window.addEventListener('resize', this.marentelHandleResize)
+  },
+  beforeUnmount() {
+    this.marentelStopAutoplay()
+    window.removeEventListener('resize', this.marentelHandleResize)
   },
   methods: {
     // Topics Carousel methods
@@ -481,17 +565,64 @@ export default {
       console.log('Tema seleccionado:', topic.title);
     },
     // Agenda methods
-    toggleExpand(itemId: number) {
-      const item = this.agendaItems.find(item => item.id === itemId)
-      if (item) {
-        item.expanded = !item.expanded
-      }
-    },
+toggleExpand(itemId: number) {
+  const item = this.agendaItems.find((item: any) => item.id === itemId)
+  if (item) {
+    // Colapsar todos los otros items expandidos
+    this.agendaItems
+      .filter((agendaItem: any) => agendaItem.id !== itemId && agendaItem.expanded)
+      .forEach((agendaItem: any) => agendaItem.expanded = false)
+    
+    // Toggle el item actual
+    item.expanded = !item.expanded
+  }
+},
     getInitials(name: string) {
       return name.split(' ').map(word => word[0]).join('').toUpperCase()
+    },
+
+     marentelStartAutoplay() {
+      this.autoplayInterval = setInterval(() => {
+        this.marentelNextSlide()
+      }, 3000) // Cambia cada 3 segundos
+    },
+    marentelStopAutoplay() {
+      if (this.autoplayInterval) {
+        clearInterval(this.autoplayInterval)
+        this.autoplayInterval = null
+      }
+    },
+    marentelNextSlide() {
+      this.currentIndexMarentel = (this.currentIndexMarentel + 1) % this.partners.length
+    },
+    marentelGoToSlide(index: number) {
+      this.currentIndexMarentel = index
+      // Reiniciar autoplay
+      this.marentelStopAutoplay()
+      this.marentelStartAutoplay()
+    },
+    marentelHandleImageError(event: Event) {
+      // Ocultar imagen y mostrar texto si hay error
+      const target = event.target as HTMLImageElement
+      if (target) {
+        target.style.display = 'none'
+        if (target.nextElementSibling) {
+          (target.nextElementSibling as HTMLElement).style.display = 'block'
+        }
+      }
+    },
+    marentelHandleResize() {
+      // Ajustar ancho de items según el tamaño de pantalla
+      if (window.innerWidth < 768) {
+        this.itemWidth = 200
+      } else if (window.innerWidth < 1024) {
+        this.itemWidth = 240
+      } else {
+        this.itemWidth = 280
+      }
     }
-  }
-};
+    }
+}
 </script>
 
 <style scoped lang="scss">
@@ -619,12 +750,19 @@ background: linear-gradient(180deg, #021E60 0%, #0C0C2A 100%);
 
 .topics-carousel {
   width: 100%;  
-  min-height: 500px;
+  min-height: 400px;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.title-center{
+  
+  align-self: center;
+  width: 100%;
+  text-align: center;
 }
 
 .title {
@@ -633,25 +771,45 @@ background: linear-gradient(180deg, #021E60 0%, #0C0C2A 100%);
   color: white;
   margin-bottom: 3rem;
   letter-spacing: -0.025em;
+  white-space: nowrap;
 }
 
 .carousel-container {
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;  
 }
 
 .carousel-track {
   display: flex; 
- gap: 1.5rem;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
   width: calc(100% * 5 / 3); /* Ajusta según el número de items */
+ 
 }
 
+.carousel-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 10vw;
+    background: linear-gradient(to left,
+        rgba(10, 10, 31, 1) 0%,
+        rgba(10, 10, 31, 0.8) 30%,
+        rgba(10, 10, 31, 0.4) 60%,
+        transparent 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
 .topic-card-wrapper {
   flex: 0 0 calc(25% - 1rem);
-  padding: 0 0.75rem;
+  padding: 0 0.45rem;
 	padding-top: 0 0.75rem;
   padding-bottom: 0 0.75rem;
+  width: 90%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
 }
 
 .topic-card {
@@ -660,8 +818,7 @@ background: linear-gradient(180deg, #021E60 0%, #0C0C2A 100%);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
-  padding: 2rem;
-  height: 16rem;
+  padding: 0.5rem; 
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -669,7 +826,9 @@ background: linear-gradient(180deg, #021E60 0%, #0C0C2A 100%);
   text-align: center;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
+  overflow: hidden; 
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
 }
  
 .card-bg-effect {
@@ -679,6 +838,7 @@ background: linear-gradient(180deg, #021E60 0%, #0C0C2A 100%);
   border-radius: 1.5rem;
   opacity: 0;
   transition: opacity 0.3s ease;
+  aspect-ratio: 1 / 1;
 }
  
 
@@ -723,7 +883,7 @@ background: linear-gradient(180deg, #021E60 0%, #0C0C2A 100%);
   transition: opacity 0.5s ease;
 }
 
-.topic-card:hover .shine-effect {
+.shine-effect {
   opacity: 1;
   animation: shine 2s ease-in-out infinite;
 }
@@ -815,13 +975,15 @@ background: linear-gradient(180deg, #021E60 0%, #0C0C2A 100%);
   }
   
   .topic-card-wrapper {
-    flex: none;
-    width: 100%;
+    flex: none; 
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
     padding: 0;
   }
   
-  .topic-card {
-    height: 12rem;
+  .topic-card { 
+  max-width: 280px;
+    aspect-ratio: 1 / 1;
     padding: 1.5rem;
   }
   
@@ -835,8 +997,8 @@ background: linear-gradient(180deg, #021E60 0%, #0C0C2A 100%);
 }
 
 @media (max-width: 480px) {
-  .topic-card {
-    height: 10rem;
+  .topic-card { 
+  max-width: 280px;
     padding: 1rem;
   }
   
@@ -872,8 +1034,9 @@ background: linear-gradient(180deg, #021E60 0%, #0C0C2A 100%);
 
 .agenda-item {
 border-radius: 32px;
-border: 1px solid rgba(255, 255, 255, 0.16);
-background: rgba(0, 17, 92, 0.40);
+background: rgba(31, 31, 82, 0.24);
+
+backdrop-filter: blur(17.100000381469727px); 
 backdrop-filter: blur(17.100000381469727px);
 
 display: flex;
@@ -895,12 +1058,30 @@ align-self: stretch;
   transform: translateY(-2px);
 }
 
-.break-item,
+.break-item
+{
+   border-radius: 32px;
+border: 1px solid rgba(255, 255, 255, 0.16);
+
+background: rgba(0, 17, 92, 0.40);
+
+backdrop-filter: blur(17.100000381469727px);
+
+  cursor: default;
+  display: flex;
+padding: 24px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+align-self: stretch;
+}
 .closing-item {
   border-radius: 32px;
 border: 1px solid rgba(255, 255, 255, 0.08);
+
 background: rgba(31, 31, 82, 0.24);
-backdrop-filter: blur(17.100000381469727px);  
+
+backdrop-filter: blur(17.100000381469727px);
   cursor: default;
   display: flex;
 padding: 24px;
@@ -912,12 +1093,22 @@ align-self: stretch;
 
 .break-item:hover,
 .closing-item:hover {
-  background: rgba(255, 255, 255, 0.05);
+  border-radius: 32px;
+border: 1px solid rgba(255, 255, 255, 0.16);
+
+background: rgba(0, 17, 92, 0.40);
+
+backdrop-filter: blur(17.100000381469727px);
   transform: none;
 }
 
 .closing-item {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 32px;
+border: 1px solid rgba(255, 255, 255, 0.16);
+
+background: rgba(0, 17, 92, 0.40);
+
+backdrop-filter: blur(17.100000381469727px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -959,8 +1150,10 @@ aspect-ratio: 1/1;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin: 0;
-gap: 16px;
+  gap: 16px;
   
 }
 
@@ -1098,6 +1291,8 @@ font-size: 14px;
 font-style: normal;
 font-weight: 400;
 line-height: 140%; /* 19.6px */
+width: 100%;
+ 
 }
 
 /* Transiciones para el expand */
@@ -1112,5 +1307,205 @@ line-height: 140%; /* 19.6px */
   max-height: 0;
   opacity: 0;
 }
+.marentel-partners-carousel {
+  width: 100%; 
+  padding: 4rem 0;
+  overflow: hidden;
+}
 
+.marentel-carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.marentel-carousel-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.marentel-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.marentel-carousel-wrapper::before,
+.marentel-carousel-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10vw;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Degradado derecho */
+.marentel-carousel-wrapper::before {
+    right: 0;
+    background: linear-gradient(to left,
+        rgba(10, 10, 31, 1) 0%,
+        rgba(10, 10, 31, 0.8) 30%,
+        rgba(10, 10, 31, 0.4) 60%,
+        transparent 100%
+    );
+}
+
+/* Degradado izquierdo */
+.marentel-carousel-wrapper::after {
+    left: 0;
+    background: linear-gradient(to right,
+        rgba(10, 10, 31, 1) 0%,
+        rgba(10, 10, 31, 0.8) 30%,
+        rgba(10, 10, 31, 0.4) 60%,
+        transparent 100%
+    );
+}
+.marentel-carousel-track {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: fit-content;
+}
+
+.marentel-carousel-item {
+  flex-shrink: 0; 
+  padding: 0 1rem;
+}
+
+.marentel-partner-card {
+   
+  backdrop-filter: blur(10px); 
+  border-radius: 12px;
+  padding: 2rem;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.marentel-partner-card:hover {
+ 
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.marentel-partner-logo {
+  max-width: 120px;
+  max-height: 60px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.marentel-partner-card:hover .marentel-partner-logo {
+  opacity: 1;
+}
+
+.marentel-partner-name {
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  display: none;
+  text-align: center;
+}
+
+.marentel-carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+
+.marentel-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.marentel-indicator:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.marentel-indicator.marentel-active {
+  background: white;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .marentel-carousel-item {
+     
+  }
+  
+  .marentel-carousel-title {
+    font-size: 2rem;
+  }
+  
+  .marentel-partner-card {
+    height: 120px;
+    padding: 1.5rem;
+  }
+  
+  .marentel-partner-logo {
+    max-width: 100px;
+    max-height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .marentel-carousel-item {
+     
+  }
+  
+  .marentel-carousel-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .marentel-partner-card {
+    height: 100px;
+    padding: 1rem;
+  }
+  
+  .marentel-partner-logo {
+    max-width: 80px;
+    max-height: 40px;
+  }
+  
+  .marentel-partners-carousel {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .marentel-carousel-item {
+     
+  }
+  
+  .marentel-partner-card {
+    height: 80px;
+    padding: 0.5rem;
+  }
+  
+  .marentel-partner-logo {
+    max-width: 60px;
+    max-height: 30px;
+  }
+}
 </style>
