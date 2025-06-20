@@ -10,7 +10,7 @@ export function provideApi() {
     // const runtimeConfig = useRuntimeConfig()
   // Here we set the base URL for all requests made to the api
   const api = axios.create({
-    baseURL: 'http://34.16.43.99:8000',
+    baseURL: 'http://34.16.43.99/:8000',
   })
 
   // We set an interceptor for each request to
