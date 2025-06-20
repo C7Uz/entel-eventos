@@ -77,6 +77,14 @@ body {
     font-family: 'Barlow' !important;
 }
 
+  .fondo-navbar {
+        border-radius: 48px;
+        background: linear-gradient(90deg, rgba(26, 51, 162, 0.28) 0%, rgba(52, 70, 154, 0.12) 100%);
+        margin-top: 32px;    
+        padding: 20px 20px 20px 32px;
+        backdrop-filter: blur(46px);
+}
+
 .theme-color {
     .logo-white {
         display: block;
@@ -809,14 +817,10 @@ button {
     /* 122.222% */
 }
 
-.fondo-navbar {
-    border-radius: 48px;
-    background: linear-gradient(90deg, rgba(26, 51, 162, 0.28) 0%, rgba(52, 70, 154, 0.12) 100%);
-    margin-top: 32px;
-    ;
-    padding: 20px 20px 20px 32px;
-    backdrop-filter: blur(46px);
+.encima{
+    z-index: 9999999;
 }
+
 
 .text-entel-ruta {
     color: var(--on-white, #FFF);
@@ -993,6 +997,8 @@ button {
         min-height: 472px;
         max-width: 592px;
     }
+    
+
 }
 
 @media (min-width: 640px) {
@@ -1036,13 +1042,17 @@ button {
         padding-left: 0 !important;
     }
 
-
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    
+}
 
 @media (min-width: 768px) {
     .md\:bg-transparent-i {
         background-color: transparent !important;
     }
+
+  
+
 }
