@@ -20,7 +20,7 @@ onBeforeMount(async () => {
 	
 	settingModule.setTheme('theme-color')
 	settingModule.setShowFooter(false)
-	settingModule.setShowHeader(true)
+	settingModule.setShowHeader(false)
 
 
   console.log(settingModule)
