@@ -77,12 +77,12 @@ body {
     font-family: 'Barlow' !important;
 }
 
-  .fondo-navbar {
-        border-radius: 48px;
-        background: linear-gradient(90deg, rgba(26, 51, 162, 0.28) 0%, rgba(52, 70, 154, 0.12) 100%);
-        margin-top: 32px;    
-        padding: 20px 20px 20px 32px;
-        backdrop-filter: blur(46px);
+.fondo-navbar {
+    border-radius: 48px;
+    background: linear-gradient(90deg, rgba(26, 51, 162, 0.28) 0%, rgba(52, 70, 154, 0.12) 100%);
+    margin-top: 32px;    
+    padding: 20px 20px 20px 32px;
+    backdrop-filter: blur(46px);
 }
 
 .theme-color {
@@ -777,15 +777,25 @@ button {
 
 .logo-entel-xl {
 
-    width: 408.189px;
-    height: 180px;
+   width: 288px; height: auto;
     flex-shrink: 0;
-}
 
+
+}
+@media (min-width: 768px) 
+{ 
+    .logo-entel-xl {  width: 408.189px;
+    height: 180px;  flex-shrink: 0; }
+}
 .bg-darkblue {
 
     background: #0A0A1F;
 }
+
+.margin-t-120 {
+    margin-top: 2.5rem;
+}
+
 .text-white {
     color: #FFF;
 }
@@ -1056,3 +1066,33 @@ button {
   
 
 }
+
+.custom-checkbox input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.square {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, border-color 0.2s;
+  position: relative;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .square {
+  background-color: #002EFF;
+  border-color: #002EFF;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .square::after {
+  content: "✔";
+  color: white;
+  font-size: 14px;
+  position: absolute;
+}
+

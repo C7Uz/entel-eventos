@@ -764,7 +764,7 @@ const createError = (err) => {
   _err.__nuxt_error = true;
   return _err;
 };
-const appHead = { "meta": [{ "name": "viewport", "content": "width=device-width, initial-scale=1" }, { "charset": "utf-8" }], "link": [{ "rel": "icon", "type": "image/x-icon", "href": "/public/assets/img/icons/favicon.svg" }], "style": [], "script": [], "noscript": [], "charset": "utf-8", "viewport": "width=device-width, initial-scale=1", "title": "Entel - Marketing e innovación" };
+const appHead = { "meta": [{ "name": "viewport", "content": "width=device-width, initial-scale=1" }, { "charset": "utf-8" }], "link": [{ "rel": "icon", "type": "image/x-icon", "href": "/assets/img/icons/favicon.svg" }], "style": [], "script": [], "noscript": [], "charset": "utf-8", "viewport": "width=device-width, initial-scale=1", "title": "Entel - Marketing e innovación" };
 const appLayoutTransition = false;
 const appPageTransition = false;
 const appKeepalive = false;
@@ -833,7 +833,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-a3eadbe4.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-df2af05c.mjs').then((m) => m.default || m)
   },
   {
     name: "event-slug-inscription",
@@ -841,7 +841,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-80240148.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-c1426e36.mjs').then((m) => m.default || m)
   },
   {
     name: "event-slug-thanks",
@@ -849,7 +849,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-f9a07613.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-386cc045.mjs').then((m) => m.default || m)
   },
   {
     name: "event-empower",
@@ -857,7 +857,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-67bc384f.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-f7269869.mjs').then((m) => m.default || m)
   },
   {
     name: "event-empower-inscription",
@@ -865,7 +865,15 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-c403c418.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-4a907968.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "event-empower-thanks",
+    path: "/event/empower/thanks",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/index-d9df0a63.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -873,7 +881,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-821a99c7.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-3518d04f.mjs').then((m) => m.default || m)
   },
   {
     name: "laruta",
@@ -881,7 +889,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-18ef263e.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-776d0355.mjs').then((m) => m.default || m)
   },
   {
     name: "thanks",
@@ -889,7 +897,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/thanks-91ae4070.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/thanks-fada812a.mjs').then((m) => m.default || m)
   }
 ];
 const routerOptions0 = {
@@ -1168,7 +1176,7 @@ const _wrapIf = (component, props, slots) => {
 };
 const layouts = {
   carrusel: () => import('./_nuxt/carrusel-8b02db5f.mjs').then((m) => m.default || m),
-  default: () => import('./_nuxt/default-2d0edb7f.mjs').then((m) => m.default || m)
+  default: () => import('./_nuxt/default-cdb7d55e.mjs').then((m) => m.default || m)
 };
 const LayoutLoader = /* @__PURE__ */ defineComponent({
   name: "LayoutLoader",

@@ -15,8 +15,11 @@ export const useEvent = defineStore('event', {
                 this.setEvent(null);
                 const response = await eventService.findOne(slug)
                 this.setEvent(response);
+                //console.log('Event found:', response);
                 return { ok: true, response: response }
             } catch (error: any) {
+                
+                //console.log('Event found:', error?.response);
                 return { ok: false, error: error?.response || 'Error' }
             }
         },
