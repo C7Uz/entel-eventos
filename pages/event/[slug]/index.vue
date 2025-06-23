@@ -162,12 +162,13 @@ onBeforeMount(async () => {
 									</div>
 								</article>
 
-								<div class="fixed left-0 bottom-0 lg:relative flex flex-col items-center justify-center w-full z-20">
-									<NuxtLink :to="'/event/'+eventModule.event.slug+'/inscription'" class="w-full lg:w-max bg-primary flex text-white text-center font-medium py-2.5 px-12 rounded-none lg:rounded-full text-lg lg:text-base items-center justify-center mt-5 hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed width-default-button">
-										<img class="w-4 mr-2" src="~/public/assets/img/icons/edit.svg" alt="">
-										Inscribirme
-									</NuxtLink>
-								</div>
+								
+								 <div class="fixed left-0 bottom-0 md:hidden flex flex-col items-center justify-center w-full z-20 p-6">
+        <NuxtLink :to="'/event/'+eventModule.event.slug+'/inscription'" type="button" class="w-max bg-primary text-white text-center font-medium py-4 px-8 rounded-full text-base flex items-center justify-center hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
+                          <img class="w-4 mr-2" src="~/public/assets/img/icons/edit.svg" alt="">
+                          Inscribirme
+        </NuxtLink>  
+      </div>
 
 							</div>
 						</div>

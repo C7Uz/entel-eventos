@@ -296,31 +296,7 @@ onBeforeMount(async () => {
 												{{ errors.job }}
 											</p>
 										</div>
-										<div class="w-full md:w-1/2">
-											<p class="text-black text-base font-medium mb-2">¿Es cliente Entel Empresas?</p>
-											<div class="w-full flex items-center">
-												<label class="radio-input flex items-center cursor-pointer mr-4" for="response1">
-													<input class="w-0 h-0 invisible" id="response1" type="radio" value="1" name="question" @change="changeRadio">
-													<span class="circle w-5 h-5 rounded-full border-3 border-solid border-color-radio flex items-center justify-center">
-														<span class="point w-2.5 h-2.5 rounded-full bg-transparent"></span>
-													</span>
-													<span class="pl-2 text-base font-regular text-black leading-none">Si</span>
-												</label>
-												<label class="radio-input flex items-center cursor-pointer" for="response2">
-													<input class="w-0 h-0 invisible" id="response2" type="radio" value="0" name="question" @change="changeRadio">
-													<span class="circle w-5 h-5 rounded-full border-3 border-solid border-color-radio flex items-center justify-center">
-														<span class="point w-2.5 h-2.5 rounded-full bg-transparent"></span>
-													</span>
-													<span class="pl-2 text-base font-regular text-black leading-none">No</span>
-												</label>
-											</div>
-											<p v-if="errors.flag_business" class="m-0 text-error text-xs mt-1 font-medium pl-4">
-												{{ errors.flag_business }}
-											</p>
-										</div>
-									</div>
-									
-									<div class="w-full flex flex-col md:flex-row gap-x-8 gap-y-6">
+												
 										<div class="w-full md:w-1/2">
 											<label
 											class="label-input relative block overflow-hidden border-b-3 bg-gray-slow pt-4 pb-1 px-4 focus-within:border-blue-600 rounded-t-lg hover:bg-grey-hover active:bg-grey-focus focus:bg-grey-focus group-input"
@@ -348,23 +324,53 @@ onBeforeMount(async () => {
 												{{ errors.email }}
 											</p>
 										</div>
-										<div class="w-full md:w-1/2 flex items-center justify-start">
-										<div class="w-full flex items-center">
-											<label class="custom-checkbox flex items-center cursor-pointer mr-4" for="publicidad">
-											<input 
-												class="w-5 h-5" 
-												id="publicidad" 
-												type="checkbox" 
-												name="publicidad"
-												v-model="form.publicidad"
-											>
-											<span class="square"></span>
-											<span class="pl-2 text-base font-regular text-black leading-none">
-												Acepto el envío de publicidad
-											</span>
-											</label>
-										</div>
+
+										
 									</div>
+									
+									<div class="w-full flex flex-col md:flex-row gap-x-8 gap-y-6">
+										
+										<div class="w-full md:w-1/2">
+											<p class="text-black text-base font-medium mb-2">¿Es cliente Entel Empresas?</p>
+											<div class="w-full flex items-center">
+												<label class="radio-input flex items-center cursor-pointer mr-4" for="response1">
+													<input class="w-0 h-0 invisible" id="response1" type="radio" value="1" name="question" @change="changeRadio">
+													<span class="circle w-5 h-5 rounded-full border-3 border-solid border-color-radio flex items-center justify-center">
+														<span class="point w-2.5 h-2.5 rounded-full bg-transparent"></span>
+													</span>
+													<span class="pl-2 text-base font-regular text-black leading-none">Si</span>
+												</label>
+												<label class="radio-input flex items-center cursor-pointer" for="response2">
+													<input class="w-0 h-0 invisible" id="response2" type="radio" value="0" name="question" @change="changeRadio">
+													<span class="circle w-5 h-5 rounded-full border-3 border-solid border-color-radio flex items-center justify-center">
+														<span class="point w-2.5 h-2.5 rounded-full bg-transparent"></span>
+													</span>
+													<span class="pl-2 text-base font-regular text-black leading-none">No</span>
+												</label>
+											</div>
+											<p v-if="errors.flag_business" class="m-0 text-error text-xs mt-1 font-medium pl-4">
+												{{ errors.flag_business }}
+											</p>
+										</div>
+										
+										
+										<div class="w-full md:w-1/2 flex items-center justify-start">
+											<div class="w-full flex items-center">
+												<label class="custom-checkbox flex items-center cursor-pointer mr-4" for="publicidad">
+												<input 
+													class="w-5 h-5" 
+													id="publicidad" 
+													type="checkbox" 
+													name="publicidad"
+													v-model="form.publicidad"
+												>
+												<span class="square"></span>
+												<span class="pl-2 text-base font-regular text-black leading-none">
+													Acepto el envío de publicidad
+												</span>
+												</label>
+											</div>
+										</div>
 									</div>
 
 									<div class="w-full flex flex-col md:flex-row gap-x-8 gap-y-6">

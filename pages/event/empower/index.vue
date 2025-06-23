@@ -355,42 +355,42 @@ export default {
           title: "Inteligencia Artificial",
           icon: "fas fa-brain",
           gradient: "from-blue-500 to-purple-500",
-          background: "../assets/img/ai.png"
+          background: "../../assets/img/ai.png"
         },
         {
           id: 2,
           title: "Conectividad",
           icon: "fas fa-wifi",
           gradient: "from-blue-500 to-cyan-500",
-          background: "../assets/img/conectividad.png"
+          background: "../../assets/img/conectividad.png"
         },
         {
           id: 3,
           title: "Ciberseguridad",
           icon: "fas fa-shield-alt",
           gradient: "from-blue-600 to-indigo-500",
-          background: "../assets/img/ciberseguridad.png"
+          background: "../../assets/img/ciberseguridad.png"
         },
         {
           id: 4,
           title: "Cloud",
           icon: "fas fa-cogs",
           gradient: "from-purple-500 to-pink-500",
-          background: "../assets/img/cloud.png"
+          background: "../../assets/img/cloud.png"
         },
         {
           id: 5,
           title: "Automatización y Gestión Inteligente",
           icon: "fas fa-cogs",
           gradient: "from-purple-500 to-pink-500",
-          background: "../assets/img/automatizacion.png"
+          background: "../../assets/img/automatizacion.png"
         }, 
         {
           id: 7,
           title: "Eficiencia Operativa",
           icon: "fas fa-chart-bar",
           gradient: "from-cyan-500 to-blue-500",
-          background: "../assets/img/eficiencia.png"
+          background: "../../assets/img/eficiencia.png"
         }
       ],
       // Agenda data
@@ -400,7 +400,7 @@ export default {
           time: '8:30 am',
           title: 'Recepción',
           type: 'break',
-          image: '../assets/img/icons/edit.png',
+          image: '../../assets/img/icons/edit.png',
           expandable: false
         },
         {
@@ -408,7 +408,7 @@ export default {
           time: '9:00 am',
           title: 'Bienvenida a cargo de Entel',
           type: 'break',
-          image: '../assets/img/icons/entel.png',
+          image: '../../assets/img/icons/entel.png',
           expandable: false
         },
         {
@@ -418,11 +418,11 @@ export default {
           tag: 'Charla de apertura',
           expandable: true,
           expanded: false,
-          image: '../assets/img/icons/speaker.png',
+          image: '../../assets/img/icons/speaker.png',
           description: 'Cuál es el impacto de la digitalización en el entorno empresarial peruano, destacando tendencias, desafíos y estrategias clave para enfrentar el futuro. Se explorarán las oportunidades que ofrece la transformación digital para impulsar el crecimiento y la eficiencia en las organizaciones.',
           speaker: {
             name: 'Iván Portocaero',
-            foto: '../assets/img/expositores/ivan_portocarrero.png', 
+            foto: '../../assets/img/expositores/ivan_portocarrero.png', 
             title: 'Director de análisis sectorial y de proyectos del Servicio de Asesoría Empresarial (SAE).'
           }
         },
@@ -433,11 +433,11 @@ export default {
           tag: 'Microsoft',
           expandable: true,
           expanded: false,
-          image: '../assets/img/icons/speaker.png',
+          image: '../../assets/img/icons/speaker.png',
           description: 'Cómo la Inteligencia Artificial está dejando de ser una promesa futura para convertirse en una herramienta concreta en la toma de decisiones, la productividad y la innovación.',
           speaker: {
             name: 'Raul Campos',
-            foto: '../assets/img/expositores/raul_campos.png',
+            foto: '../../assets/img/expositores/raul_campos.png',
             title: 'Microsoft Channel Sales Manager'
           }
         },
@@ -448,11 +448,11 @@ export default {
           tag: 'SOTI',
           expandable: true,
           expanded: false,
-          image: '../assets/img/icons/speaker.png',
+          image: '../../assets/img/icons/speaker.png',
           description: 'Cómo la Plataforma SOTI ONE permite que las organizaciones gestionen de forma centralizada sus dispositivos móviles, aplicaciones y endpoints, optimizando así las operaciones críticas del negocio, aumentando la productividad  y fortaleciendo la seguridad.',
           speaker: {
             name: 'José Antonio Martinez',
-            foto: '../assets/img/expositores/jose_antonio_martinez.png', 
+            foto: '../../assets/img/expositores/jose_antonio_martinez.png', 
             title: 'Business Partner and Alliances Sales LATAM'
           }
         },
@@ -463,11 +463,11 @@ export default {
           tag: 'Fortinet',
           expandable: true,
           expanded: false,
-          image: '../assets/img/icons/speaker.png',
+          image: '../../assets/img/icons/speaker.png',
           description: 'La evolución de la seguridad gestionada hacia SASE marca un cambio clave: integrar red y seguridad en la nube con inteligencia artificial para anticipar amenazas. Esto permite una protección más ágil y contextual en un entorno digital cada vez más distribuido. La seguridad ya no es un perímetro, es una experiencia continua e inteligente.',
           speaker: {
             name: 'Tomás Asmat',
-            foto: '../assets/img/expositores/tomas_asmat.png', 
+            foto: '../../assets/img/expositores/tomas_asmat.png', 
             title: 'Sr. Systems Engineer'
           }
         },
@@ -477,7 +477,7 @@ export default {
           title: 'Coffee Break',
           type: 'break',
           tag: 'Zona Break',
-          image: '../assets/img/icons/coffee.png',
+          image: '../../assets/img/icons/coffee.png',
           expandable: false
         },
         {
@@ -487,11 +487,11 @@ export default {
           tag: 'Infobip',
           expandable: true,
           expanded: false,
-          image: '../assets/img/icons/speaker.png',
+          image: '../../assets/img/icons/speaker.png',
           description: 'Cómo la IA conversacional está cambiando la forma en que las empresas gestionan la relación con sus usuarios. Descubre estrategias y soluciones prácticas para transformar la forma en que te conectas.',
           speaker: {
             name: 'Maurice Falcón',
-            foto: '../assets/img/expositores/maurice_falcon.png',
+            foto: '../../assets/img/expositores/maurice_falcon.png',
             title: 'Customer Growth Executive'
           }
         },
@@ -502,11 +502,11 @@ export default {
           tag: 'Acronis',
           expandable: true,
           expanded: false,
-          image: '../assets/img/icons/speaker.png',
+          image: '../../assets/img/icons/speaker.png',
           description: 'Descubre cómo modernizar la seguridad de TI con Acronis, integrando protección avanzada, automatización y gestión centralizada desde una sola consola.',
           speaker: {
             name: 'Guillermo Márquez',
-            foto: '../assets/img/expositores/guillermo_marquez.png',
+            foto: '../../assets/img/expositores/guillermo_marquez.png',
             title: 'Senior Evangelist, Americas'
           }
         },
@@ -517,11 +517,11 @@ export default {
           tag: 'Amazon Web Services',
           expandable: true,
           expanded: false,
-          image: '../assets/img/icons/speaker.png',
+          image: '../../assets/img/icons/speaker.png',
           description: 'Frente a la necesidad creciente de las empresas peruanas por acelerar su transformación digital, exploraremos el enfoque peculiar de AWS, en donde nos enfocamos en los desafíos empresariales de nuestros clientes para crear soluciones de nube innovadoras, seguras y costo-eficientes que revolucionan los procesos de negocio.',
           speaker: {
             name: 'Diego Silva',
-            foto: '../assets/img/expositores/diego_silva.png',
+            foto: '../../assets/img/expositores/diego_silva.png',
             title: 'Territory Manager AWS Perú'
           }
         },
@@ -530,7 +530,7 @@ export default {
           time: '12:30 pm',
           title: 'Cierre',
           type: 'closing',
-          image: '../assets/img/icons/handshake.png',
+          image: '../../assets/img/icons/handshake.png',
           expandable: false
         }
       ],
@@ -538,39 +538,39 @@ export default {
       partners: [
         { 
           name: 'Acronis', 
-          logo: '../assets/img/marcas/acronis.png'
+          logo: '../../assets/img/marcas/acronis.png'
         },
         { 
           name: 'AWS', 
-          logo: '../assets/img/marcas/aws.png'
+          logo: '../../assets/img/marcas/aws.png'
         },
         { 
           name: 'Fortinet', 
-          logo: '../assets/img/marcas/fortinet.png'
+          logo: '../../assets/img/marcas/fortinet.png'
         },
         { 
           name: 'Honor', 
-          logo: '../assets/img/marcas/honor.png'
+          logo: '../../assets/img/marcas/honor.png'
         },
         { 
           name: 'Infobip', 
-          logo: '../assets/img/marcas/infobip.png'
+          logo: '../../assets/img/marcas/infobip.png'
         },
         { 
           name: 'Microsoft', 
-          logo: '../assets/img/marcas/microsoft.png'
+          logo: '../../assets/img/marcas/microsoft.png'
         },
         { 
           name: 'Samsung', 
-          logo: '../assets/img/marcas/samsung.png'
+          logo: '../../assets/img/marcas/samsung.png'
         },
         { 
           name: 'Soti', 
-          logo: '../assets/img/marcas/soti.png'
+          logo: '../../assets/img/marcas/soti.png'
         },
         { 
           name: 'zte nubia', 
-          logo: '../assets/img/marcas/zte_nubia.png'
+          logo: '../../assets/img/marcas/zte_nubia.png'
         }
       ]    
       }
@@ -1282,6 +1282,7 @@ align-self: stretch;
 
 .speaker-avatar {
     width: 56px;
+    height: 56px;
     aspect-ratio: 1 / 1; /* Mantiene siempre la relación 1:1 */
     border-radius: 50%;
     float: right;
@@ -1421,7 +1422,7 @@ height: 1px;
     height: 50%;
     background: 
         linear-gradient(to top, rgba(0,0,0,0) 0%, transparent 100%),
-        url('../assets/img/base_degrade.png');
+        url('../../assets/img/base_degrade.png');
     background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -1530,6 +1531,11 @@ height: 1px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+.img-avatar{
+  height: 100%;
+  width: 100%;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .marentel-carousel-item {
@@ -1576,12 +1582,34 @@ height: 1px;
   }
 }
 
-@media (max-width: 480px) {
-  .marentel-carousel-item {
-     
-  }
-  
-  .marentel-partner-card {
+@media (max-width: 650px) {
+
+.description {
+  color:  #E5E6F4 ;
+flex: 1 0 0;
+/* Regular/Medium */
+font-family: Barlow;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 22.4px */
+padding: 0px;
+display: flex; 
+justify-content: center;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+
+}
+
+.speaker {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+padding: 0px;
+    align-self: stretch;
+}
+.marentel-partner-card {
     height: 80px;
     padding: 0.5rem;
   }
@@ -1590,5 +1618,19 @@ height: 1px;
     max-width: 60px;
     max-height: 30px;
   }
+
+
+
+}
+
+
+
+@media (max-width: 480px) {
+  .marentel-carousel-item {
+     
+  }
+  
+
+  
 }
 </style>
