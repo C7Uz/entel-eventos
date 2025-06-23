@@ -2,6 +2,7 @@
 import { useSetting } from '~/store/modules/setting.module'
 import { useEvent } from '~/store/modules/event.module'
 import TopicsCarousel from './components/TopicsCarousel.vue'
+import CepCarousel from '~/components/ui/CepCarousel.vue'
 
 const settingModule = useSetting()
 const eventModule = useEvent()
@@ -28,35 +29,49 @@ onBeforeMount(async () => {
  
 </script>
 <template>
-<section class="hidden md:block container-fluid absolute inset-x-0 top-0 left-0 z-50 h-header transition duration-3 fixed-header">
-    <div class="h-full fondo-navbar">
-        <nav class="flex items-center justify-between py-2 h-full" aria-label="Global">
-            <div class="flex lg:flex-1">
-                <NuxtLink to="/" class="-m-1.5 p-1.5">
-                    <img class="h-8 w-auto logo-white" src="~/public/assets/img/logo.svg" alt="">
-                    <img class="h-8 w-auto logo-color" src="~/public/assets/img/logo-color.svg" alt="">
-                </NuxtLink>
-            </div>
-            <div class="flex md:flex">
-                <NuxtLink :to="'/event/empower/inscription'" type="button" class="w-max bg-primary text-white text-center font-medium py-2 px-4 rounded-full text-base flex items-center justify-center hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
-                    <img class="w-4 mr-2" src="~/public/assets/img/icons/edit.svg" alt="">
-                    Inscribirme
-                </NuxtLink>
-            </div>
-        </nav>
-    </div>
-</section>
-	<div class="w-full h-full bg-darkblue" >
+    <section class="hidden md:block  container-fluid absolute inset-x-0 top-0 left-0 z-50 h-header transition duration-3 fixed-header">
+        <div class="h-full fondo-navbar">
+            <nav class="flex items-center justify-between py-2 h-full" aria-label="Global">
+                <div class="flex lg:flex-1">
+                    <NuxtLink to="/" class="-m-1.5 p-1.5">
+                        <img class="h-8 w-auto logo-white" src="~/public/assets/img/logo.svg" alt="">
+                        <img class="h-8 w-auto logo-color" src="~/public/assets/img/logo-color.svg" alt="">
+                    </NuxtLink>
+                </div>
+                <div class="flex md:flex">
+                    <NuxtLink :to="'/event/empower/inscription'" type="button" class="w-max bg-primary text-white text-center font-medium py-2 px-4 rounded-full text-base flex items-center justify-center hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
+                        <img class="w-4 mr-2" src="~/public/assets/img/icons/edit.svg" alt="">
+                        Inscribirme
+                    </NuxtLink>
+                </div>
+            </nav>
+        </div>
+    </section>
 
+
+
+	  <div class="w-full h-full bg-darkblue" >
 
 		<section 
 		class="relative h-screen fondo-hero-2" >
 			
+<div class="md:hidden container-fluid absolute inset-x-0 left-0 z-50 h-header transition duration-3 fixed-header mt-10" style="top: 40px;">
+    <div class="h-full flex items-center justify-center">
+        <nav class="flex items-center justify-center w-full py-2" aria-label="Global">
+            <div class="flex justify-center">
+                <NuxtLink to="/" class="-m-1.5 p-1.5">
+                    <img class="h-8 w-auto logo-white" src="~/public/assets/img/logo.svg" alt="">
+                    <img class="h-8 w-auto logo-color" src="~/public/assets/img/logo-color.svg" alt="">
+                </NuxtLink>
+            </div> 
+        </nav>
+    </div>
+</div>
 		
 				<div class="relative isolate pt-14 h-full w-full">
 			
 
-					<div class="container-2 w-full h-full flex flex-col justify-start md:justify-center ">
+					<div class="container-2 margin-t-120  w-full h-full flex flex-col justify-center md:justify-center ">
 						<div class="flex flex-col items-center justify-center text-white text-sm">
 							 	<div class="items-center justify-center"  > 
 												<img  src="~/public/assets/img/empower-logo.png" alt="Empower Logo" class="logo-entel-xl inline-block h-10 mr-2" />
@@ -89,7 +104,8 @@ onBeforeMount(async () => {
 		</section>
 		  
 		<main class="bg-darkblue">
-		 <section class="container-2 w-full h-full flex flex-col mt-12 pb-4">
+		 
+      <section class="container-2 w-full h-full flex flex-col mt-12 pb-4">
 				 <div class=" md:flex flex-wrap sm-pr-0">
 				<div class="w-full md:w-1/2 md:min-w-50">
 					<div class=" flex pr-4" >
@@ -112,7 +128,8 @@ onBeforeMount(async () => {
 			
 			</div>
 			</section>
-			<section class="container-2 contenedores-ad w-full h-full flex flex-col mt-12 pb-4"> 
+			
+      <section class="container-2 contenedores-ad w-full h-full flex flex-col mt-12 pb-4"> 
 								<div class="event-details-card">
 					<h2 class="event-title">Detalles del evento</h2>
 					
@@ -165,7 +182,10 @@ onBeforeMount(async () => {
 				</div>
 				
 			</section>
-			<section class="container-2 contenedores-ad w-full h-full flex flex-col mt-12 pb-4"> 
+			
+      
+
+      <section class="container-2 contenedores-ad w-full h-full flex flex-col mt-12 pb-4"> 
 					<div class="topics-carousel">
     <div class="container">
       <!-- Título -->
@@ -266,43 +286,37 @@ onBeforeMount(async () => {
             </div>
       </section>
 
-
-      <section class="container-2 w-full h-full flex flex-col mt-12 pb-4 ">
-                  <h2 class="title text-gradient">Partners</h2>
-                  <div class="marentel-partners-carousel">
-            <div class="marentel-carousel-container"> 
-              
-              <div class="marentel-carousel-wrapper">
-                <div 
-                  class="marentel-carousel-track"
-                  :style="{ transform: `translateX(-${currentIndexMarentel * itemWidth}px)` }"
-                >
-                  <div 
-                    v-for="(partner, index) in extendedPartners" 
-                    :key="`${partner.name}-${index}`"
-                    class="marentel-carousel-item"
-                  >
-                    <div class="marentel-partner-card">
-                      <img 
-                        :src="partner.logo" 
-                        :alt="`${partner.name} logo`"
-                        class="marentel-partner-logo"
-                        @error="marentelHandleImageError"
-                      />
-                      <span class="marentel-partner-name">{{ partner.name }}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        
-            </div>
-          </div>
-
-
-
+      <section class="container-2 w-full h-full flex flex-col mt-12 pb-4">                   
+  <h2 class="title text-gradient">Partners</h2>                   
+  <div class="marentel-partners-carousel">             
+    <div class="marentel-carousel-container">                               
+      <div class="marentel-carousel-wrapper">                 
+        <div                    
+          class="marentel-carousel-track"                   
+          :style="{ transform: `translateX(-${currentIndexMarentel * itemWidth}px)` }"                 
+        >                   
+          <div                      
+            v-for="(partner, index) in extendedPartners"                      
+            :key="`${partner.name}-${index}`"                     
+            class="marentel-carousel-item"                   
+          >                     
+            <div class="marentel-partner-card">                       
+              <img                          
+                :src="partner.logo"                          
+                :alt="`${partner.name} logo`"                         
+                class="marentel-partner-logo"                         
+                @error="marentelHandleImageError"                       
+              />                       
+              <span class="marentel-partner-name">{{ partner.name }}</span>                     
+            </div>                   
+          </div>                 
+        </div>               
+      </div>                      
+    </div>           
+  </div>          
       </section>
 
-<section class="container-fluid w-full h-footer bg-darkblue " >
+      <section class="container-fluid w-full h-footer bg-darkblue " >
 			<div class="container h-full">
 				<div class="w-full h-full flex items-center justify-between my-auto">
 					<span class="font-normal text-xs text-white">Copyright {{currentYear}}. Todos los derechos reservados.</span>
@@ -311,13 +325,14 @@ onBeforeMount(async () => {
 					</a>
 				</div>
 			</div>
-		</section>
-<div class="fixed left-0 bottom-0 lg:hidden flex flex-col items-center justify-center w-full z-20 p-6">
-   <NuxtLink :to="'/event/empower/inscription'" type="button" class="w-max bg-primary text-white text-center font-medium py-2 px-4 rounded-full text-base flex items-center justify-center hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
-                    <img class="w-4 mr-2" src="~/public/assets/img/icons/edit.svg" alt="">
-                    Inscribirme
-   </NuxtLink>  
-</div>
+		  </section>
+
+      <div class="fixed left-0 bottom-0 md:hidden flex flex-col items-center justify-center w-full z-20 p-6">
+        <NuxtLink :to="'/event/empower/inscription'" type="button" class="w-max bg-primary text-white text-center font-medium py-4 px-8 rounded-full text-base flex items-center justify-center hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
+                          <img class="w-4 mr-2" src="~/public/assets/img/icons/edit.svg" alt="">
+                          Inscribirme
+        </NuxtLink>  
+      </div>
 
 		</main>
 	</div>
@@ -329,7 +344,7 @@ export default {
   name: 'EmpowerSummitPage', // Combined name or choose one
   data() {
     return {
-      // Topics Carousel data
+      // Topics Carousel data 
       currentIndex: 0,
       currentIndexMarentel: 0,
       itemWidth: 280, // Ancho de cada item
@@ -552,6 +567,10 @@ export default {
         { 
           name: 'Soti', 
           logo: '../assets/img/marcas/soti.png'
+        },
+        { 
+          name: 'zte nubia', 
+          logo: '../assets/img/marcas/zte_nubia.png'
         }
       ]    
       }
@@ -1348,6 +1367,18 @@ height: 1px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  transition: transform 0.5s ease-in-out;
+}
+.marentel-carousel-track:hover {
+  transition-duration: 0.3s;
+}
+
+.marentel-carousel-track.fast-transition {
+  transition: transform 0.3s ease-out;
+}
+
+.marentel-carousel-track.slow-transition {
+  transition: transform 1s ease-in-out;
 }
 
 .marentel-carousel-title {
@@ -1420,7 +1451,7 @@ height: 1px;
 }
 .marentel-carousel-track {
   display: flex;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   width: fit-content;
 }
 
