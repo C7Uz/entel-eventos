@@ -17,7 +17,8 @@ const form: any = ref({
     flag_business: null,
     company: "",
     ruc: "",
-    email: ""
+    email: "",
+	publicidad:false
 })
 const errorsSend: any = ref(null);
 
@@ -90,7 +91,8 @@ const saveData = async () =>{
 				content_type: eventModule.event.tag,
 				content_name: eventModule.event.title
 			}));
-			window.location.href = '/thanks';
+			//window.location.href = '/thanks';
+			window.location.href = '/event/empower/thanks';
 		}
 		else{
 			errorsSend.value = useGetError(error)
@@ -119,14 +121,11 @@ onBeforeMount(async () => {
 	settingModule.setShowFooter(false)
 	settingModule.setShowHeader(true)
 
-	await eventModule.findOne('empower')
+	await eventModule.findOne('Cusco')
  
-	if(!eventModule.event){
-		window.location.href = '/';
-	}
-	form.value.event = eventModule.event.id
 
-	console.log('eventModule.event', form.value.event)
+	form.value.event = 1
+
 })
 </script>
 
@@ -331,8 +330,7 @@ onBeforeMount(async () => {
 												<input
 													type="email"
 													class="input peer-input h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 text-base flex items-end text-gray-regular font-medium"
-													@input="validate('email')" 
-                    								@change="validate('email')"
+													
 													v-model="form.email"
 													:class="{'has-content':(form.email && form.email != '') }"
 												/>
@@ -349,6 +347,35 @@ onBeforeMount(async () => {
 											<p v-if="errors.email" class="m-0 text-error text-xs mt-1 font-medium pl-4">
 												{{ errors.email }}
 											</p>
+										</div>
+								 
+									<div class="w-full md:w-1/2 flex items-center justify-start">
+									<div class="w-full flex items-center">
+										<label class="custom-checkbox flex items-center cursor-pointer mr-4" for="publicidad">
+										<input 
+											class="w-5 h-5" 
+											id="publicidad" 
+											type="checkbox" 
+											name="publicidad"
+											v-model="form.email"
+										>
+										<span class="square"></span>
+										<span class="pl-2 text-base font-regular text-black leading-none">
+											Acepto el envío de publicidad
+										</span>
+										</label>
+									</div>
+									</div>
+
+
+									</div>
+
+
+
+
+									<div class="w-full flex flex-col md:flex-row gap-x-8 gap-y-6">
+										<div class="w-full md:w-1/2">
+										
 										</div>
 										<div class="w-full md:w-1/2 flex justify-center items-center">
 											<button type="submit" class="w-max bg-primary text-white text-center font-regular py-2.5 px-8 rounded-full text-l flex items-center justify-center hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed width-default-button disabled:text-disabled-button disabled:bg-disabled-button" :disabled="!isComplete" :class="{'disabled': !isComplete}">

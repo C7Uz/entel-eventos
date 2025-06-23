@@ -58,6 +58,8 @@ onBeforeMount(async () => {
 		localStorage.removeItem('registered')
 		sendTiktok();
 		const { ok, error, response } = await eventModule.findThanks()
+		
+			
 		if(ok){
 			/* @ts-ignore */
 			fbq('track', 'CompleteRegistration');
@@ -74,25 +76,24 @@ onBeforeMount(async () => {
 })
 
 </script>
+
+
+
 <template>
 	<div class="w-full h-full">
 		<section 
-		class="relative h-screen" 
-		v-bind:style="{background: 'linear-gradient(0deg, rgba(0, 17, 92, 0.5), rgba(0, 17, 92, 0.5)), url('+contentPage.page.background+')'}"
-		style="background-repeat: no-repeat; background-size: cover; background-position: center;"
-		v-if="contentPage">
+		class="relative h-screen bg-thanks-empower" v-if="contentPage">
 			
 				<div class="relative isolate pt-14 h-full w-full">
 					<div class="container w-full h-full flex items-center pt-16">
 						<div class="flex flex-col gap-x-4 md:flex-row items-end w-full">
-							<div class="flex flex-col w-full md:w-1/3">
-								<h1 class="text-white font-regular text-4-5xl" v-text="contentPage.page.title"></h1>
-								<p class="text-white font-regular text-1xl flex flex-col mt-5" v-text="contentPage.page.subtitle"></p>
-								<!-- <p class="text-white font-light text-lg flex flex-col">
+							<div class="flex flex-col w-full md:w-1/4">
+								<h1 class="text-white font-regular text-4-5xl">¡Gracias por registrarte en Empower!</h1>
+								<p class="text-white font-regular text-1xl flex flex-col mt-5" >Síguenos en nuestras redes sociales para más información.</p>
+								<p class="text-white font-regular text-lg flex flex-col  mt-5">
 									¡Te esperamos!
-								</p> -->
-							</div>
-							<div class="flex flex-col items-center md:items-start md:justify-start w-full md:w-1/3 mt-8 md:mt-0">
+								</p> 
+								<p class="text-white font-regular text-1xl flex flex-col mt-5" ></p>
 								<div class="w-full gap-x-4 flex justify-center md:justify-start mb-6">
 									<span v-for="social in contentPage.social">
 										<a class="w-12 h-12 bg-white/30 text-white text-center font-regular rounded-full text-l flex items-center justify-center" :href="social.url" target="_blank" :title="social.network">
@@ -100,10 +101,14 @@ onBeforeMount(async () => {
 										</a>
 									</span>
 								</div>
+								<p class="text-white font-regular text-1xl flex flex-col mt-5" ></p>
+								<div class="w-full gap-x-4 flex justify-center md:justify-start mb-6">
 								<NuxtLink to="/" class="w-max text-white text-center font-medium text-base py-2.5 px-16 hover:text-white rounded-full text-l flex items-center justify-center bg-primary hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-presse">
 									Volver al inicio
 								</NuxtLink>
+								</div>
 							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -111,6 +116,22 @@ onBeforeMount(async () => {
 		</section>
 	</div>
 </template>
+
+
+
+
+
 <style scoped lang="scss">
 	@import '@/public/assets/scss/app.scss';
+	
+.bg-thanks-empower{
+    background: linear-gradient(200deg, #04C 1.72%, #001064 68.39%);
+}
+.backgraund-empower-content {
+    border-radius: 24px;
+    max-width: 557px;
+    min-width: 360px; 
+    padding: 65px;
+}
+
 </style>
