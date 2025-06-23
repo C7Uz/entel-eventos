@@ -350,21 +350,21 @@ onBeforeMount(async () => {
 										</div>
 								 
 									<div class="w-full md:w-1/2 flex items-center justify-start">
-									<div class="w-full flex items-center">
-										<label class="custom-checkbox flex items-center cursor-pointer mr-4" for="publicidad">
-										<input 
-											class="w-5 h-5" 
-											id="publicidad" 
-											type="checkbox" 
-											name="publicidad"
-											v-model="form.email"
-										>
-										<span class="square"></span>
-										<span class="pl-2 text-base font-regular text-black leading-none">
-											Acepto el envío de publicidad
-										</span>
-										</label>
-									</div>
+										<div class="w-full flex items-center">
+											<label class="custom-checkbox flex items-center cursor-pointer mr-4" for="publicidad">
+											<input 
+												class="w-5 h-5" 
+												id="publicidad" 
+												type="checkbox" 
+												name="publicidad"
+												v-model="form.publicidad"
+											>
+											<span class="square"></span>
+											<span class="pl-2 text-base font-regular text-black leading-none">
+												Acepto el envío de publicidad
+											</span>
+											</label>
+										</div>
 									</div>
 
 

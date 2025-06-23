@@ -17,7 +17,8 @@ const form: any = ref({
     flag_business: null,
     company: "",
     ruc: "",
-    email: ""
+    email: "",
+	publicidad:false
 })
 const errorsSend: any = ref(null);
 
@@ -347,6 +348,29 @@ onBeforeMount(async () => {
 												{{ errors.email }}
 											</p>
 										</div>
+										<div class="w-full md:w-1/2 flex items-center justify-start">
+										<div class="w-full flex items-center">
+											<label class="custom-checkbox flex items-center cursor-pointer mr-4" for="publicidad">
+											<input 
+												class="w-5 h-5" 
+												id="publicidad" 
+												type="checkbox" 
+												name="publicidad"
+												v-model="form.publicidad"
+											>
+											<span class="square"></span>
+											<span class="pl-2 text-base font-regular text-black leading-none">
+												Acepto el envío de publicidad
+											</span>
+											</label>
+										</div>
+									</div>
+									</div>
+
+									<div class="w-full flex flex-col md:flex-row gap-x-8 gap-y-6">
+										<div class="w-full md:w-1/2">
+											
+										</div>
 										<div class="w-full md:w-1/2 flex justify-center items-center">
 											<button type="submit" class="w-max bg-primary text-white text-center font-regular py-2.5 px-8 rounded-full text-l flex items-center justify-center hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed width-default-button disabled:text-disabled-button disabled:bg-disabled-button" :disabled="!isComplete" :class="{'disabled': !isComplete}">
 												<div class="flex" v-if="isLoading">
@@ -360,6 +384,10 @@ onBeforeMount(async () => {
 											</button>
 										</div>
 									</div>
+
+
+
+
 								</form>
 								<div v-if="errorsSend" class="mt-5 w-full bg-red-50 border border-solid border-red-dark text-red-dark rounded-lg py-3 px-5 flex items-center">
 									<span>
