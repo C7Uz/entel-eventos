@@ -121,10 +121,10 @@ onBeforeMount(async () => {
 	settingModule.setShowFooter(false)
 	settingModule.setShowHeader(true)
 
-	await eventModule.findOne('Cusco')
+	await eventModule.findOne('empower')
  
 
-	form.value.event = 1
+	form.value.event = 3
 
 })
 </script>
