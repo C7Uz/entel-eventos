@@ -38,12 +38,12 @@ onBeforeMount(async () => {
                         <img class="h-8 w-auto logo-color" src="~/public/assets/img/logo-color.svg" alt="">
                     </NuxtLink>
                 </div>
-                <div class="flex md:flex">
+                <!-- <div class="flex md:flex">
                     <NuxtLink :to="'/event/empower/inscription'" type="button" class="w-max bg-primary text-white text-center font-medium py-2 px-4 rounded-full text-base flex items-center justify-center hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
                         <img class="w-4 mr-2" src="~/public/assets/img/icons/edit.svg" alt="">
                         Inscribirme
                     </NuxtLink>
-                </div>
+                </div>-->
             </nav>
         </div>
     </section>
@@ -326,13 +326,13 @@ onBeforeMount(async () => {
 				</div>
 			</div>
 		  </section>
-
+ <!--
       <div class="fixed left-0 bottom-0 md:hidden flex flex-col items-center justify-center w-full z-20 p-6">
         <NuxtLink :to="'/event/empower/inscription'" type="button" class="w-max bg-primary text-white text-center font-medium py-4 px-8 rounded-full text-base flex items-center justify-center hover:bg-primary-hover active:bg-primary-pressed focus:bg-primary-pressed">
                           <img class="w-4 mr-2" src="~/public/assets/img/icons/edit.svg" alt="">
                           Inscribirme
         </NuxtLink>  
-      </div>
+      </div>-->
 
 		</main>
 	</div>
