@@ -758,18 +758,37 @@ button {
     background-position: center;
 
 }
+.fondo-hero-thanks {
+
+    background: linear-gradient(0deg, rgba(0, 17, 92, 0.5), rgba(0, 17, 92, 0.5)), url('../img/thank-empower.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
 
 .m-w-300{
     max-width: 300px;
     gap: 16px;
 }
 
-
+.gap-50 {
+    gap: 16px;
+    margin-top: 52px;
+} 
 .gap-16 {
     gap: 16px;
     margin-top: 30px;
 }
-
+.logo-entel-thanks {
+    width: 322px;
+    height: 141.993px;
+    flex-shrink: 0;
+}
+.logo-entel-thanks-md {
+   width: 165px;
+height: 72.76px;
+}
 .logo-entel {
     width: 244px;
     height: 114px;
@@ -798,6 +817,10 @@ button {
 
 .text-white {
     color: #FFF;
+}
+
+.max-w-396{
+    max-width: 396px;
 }
 
 .text-gradient {
