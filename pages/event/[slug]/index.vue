@@ -23,6 +23,9 @@ onBeforeMount(async () => {
 	if(!eventModule.event){
 		window.location.href = '/';
 	}
+	if(!eventModule.event.flag_endinscriptions){
+		window.location.href = '/event/'+ eventModule.event.slug +'/endinscriptions';
+	}
 
 	settingModule.setEventId(eventModule.event.slug)
 
